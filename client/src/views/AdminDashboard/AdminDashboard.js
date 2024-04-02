@@ -38,25 +38,19 @@ function AdminDashboard() {
         <div className="m-3 mx-4">
           <div className='row'>
             <div className='col-3 pt-3 shadow rounded-4 bg-dark text-white menu-box'>
-                <div className={`fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item ${
-                    activeComponent === "depositAmount" ? "active" : ""}`}
+                <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item"
                     onClick={() => handleSetActiveComponent("orderInformation")}>
                       Order Information
                 </div>
-                <div className={`fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item ${
-                    activeComponent === "depositAmount" ? "active" : ""}`}
+                <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item"
                     onClick={() => handleSetActiveComponent("mobileInformation")}>Mobile Information</div>
-                <div className={`fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item ${
-                    activeComponent === "depositAmount" ? "active" : ""}`}
+                <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item"
                     onClick={() => handleSetActiveComponent("laptopInformation")}>Laptop Information</div>
-                <div className={`fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item ${
-                    activeComponent === "depositAmount" ? "active" : ""}`}
+                <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item"
                     onClick={() => handleSetActiveComponent("tabletInformation")}>Tablet Information</div>
-                <div className={`fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item ${
-                    activeComponent === "depositAmount" ? "active" : ""}`}
+                <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item"
                     onClick={() => handleSetActiveComponent("contact")}>Contact</div>
-                <div className={`fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item ${
-                    activeComponent === "depositAmount" ? "active" : ""}`}
+                <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item"
                     onClick={() => handleSetActiveComponent("review")}>Review</div>
             </div>
             <div className={`col-9 ${activeComponent ? "active" : ""}`}>
