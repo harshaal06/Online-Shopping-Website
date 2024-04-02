@@ -15,7 +15,7 @@ function Navbar() {
           <li className="nav-item">
             <Link to="/" className="nav-link ms-md-2 ms-md-0" aria-current="page">Home</Link>
           </li>
-          {/* <li className="nav-item dropdown">
+          <li className="nav-item dropdown">
             <Link to="#" className="nav-link dropdown-toggle ms-md-2 ms-md-0" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Items
@@ -25,8 +25,8 @@ function Navbar() {
               <li><Link to="/laptop" className="dropdown-item">Laptops</Link></li>
               <li><Link to="/tablet" className="dropdown-item">Tablets</Link></li>
             </ul>
-          </li> */}
-          <li className="nav-item">
+          </li>
+          {/* <li className="nav-item">
             <Link to="/mobile" className="nav-link ms-md-2 ms-md-0">Mobiles</Link>
           </li>
           <li className="nav-item">
@@ -34,7 +34,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link to="/tablet" className="nav-link ms-md-2 ms-md-0">Tablets</Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link to="/about" className="nav-link ms-md-2 ms-md-0">About us</Link>
           </li>
