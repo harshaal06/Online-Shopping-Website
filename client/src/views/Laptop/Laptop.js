@@ -11,6 +11,7 @@ function Laptop() {
       const response = await axios.get(`${process.env.REACT_APP_API_URL}/laptop`);
       console.log(response.data.data);
      setLaptopList(response.data.data);
+     
   }
   useEffect(()=>{
     loadList(); 
