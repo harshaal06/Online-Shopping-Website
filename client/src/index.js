@@ -14,6 +14,7 @@ import Login from './views/Login/Login';
 import UserDashboard from './views/UserDashboard/UserDashboard';
 import AdminDashboard from './views/AdminDashboard/AdminDashboard';
 import { Toaster } from 'react-hot-toast';
+import NewCard from './views/NewCard/NewCard';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/user-dashboard",
     element: <UserDashboard />
+  },
+  {
+    path: "/new-card",
+    element: <NewCard />
   },
   {
     path: "/admin-dashboard",
