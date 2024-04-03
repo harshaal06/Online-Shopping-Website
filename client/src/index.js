@@ -15,6 +15,7 @@ import UserDashboard from './views/UserDashboard/UserDashboard';
 import AdminDashboard from './views/AdminDashboard/AdminDashboard';
 import { Toaster } from 'react-hot-toast';
 
+
 const router = createBrowserRouter([
   {
     path: "/",

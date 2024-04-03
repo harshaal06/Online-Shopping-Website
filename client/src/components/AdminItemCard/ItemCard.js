@@ -9,7 +9,7 @@ import "./ItemCard.css"
 function NoteCard({_id, url, title, content, price, loadItems, type}) {
 
   const deleteItem = async () => {
-    const response = await axios.delete(`${process.env.REACT_APP_API_URL}/${type}/${_id}`)
+    const response = await axios.delete(`${process.env.REACT_APP_URL}/${type}/${_id}`)
     toast.success(response.data.message)
     loadItems()
   }
