@@ -1,6 +1,6 @@
 import React from 'react'
 import './ListCard.css'
-import axios from 'axios'
+
 
 
 function ListCard({_id,url,title,content,price}) {
