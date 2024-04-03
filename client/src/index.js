@@ -16,6 +16,7 @@ import AdminDashboard from './views/AdminDashboard/AdminDashboard';
 import AdminUpdateDetails from './views/AdminDashboard/AdminUpdateDetails';
 import { Toaster } from 'react-hot-toast';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
