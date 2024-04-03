@@ -14,9 +14,9 @@ function AdminDashboard() {
   const [addItem, setAddItem] = useState("")
 
   const loadItems = async () =>{
-      const responseM = await axios.get(`${process.env.REACT_APP_API_URL}/mobile`);
-      const responseL = await axios.get(`${process.env.REACT_APP_API_URL}/laptop`);
-      const responseT = await axios.get(`${process.env.REACT_APP_API_URL}/tablet`);
+      const responseM = await axios.get(`${process.env.REACT_APP_URL}/mobile`);
+      const responseL = await axios.get(`${process.env.REACT_APP_URL}/laptop`);
+      const responseT = await axios.get(`${process.env.REACT_APP_URL}/tablet`);
 
       setMobiles(responseM.data.data);
       setLaptops(responseL.data.data);
