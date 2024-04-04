@@ -11,7 +11,7 @@ function AdminAddItem({type, loadItems}) {
   const [price, setPrice] = useState('');
 
   const addItem = async() => {
-    const response = await axios.post(`${process.env.REACT_APP_URL}/${type}`,
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/${type}`,
     {
       url: url,
       title: title,
