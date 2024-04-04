@@ -3,24 +3,35 @@ import axios from 'axios';
 import './AdminDashboard.css'
 import ItemCard from "../../components/AdminItemCard/ItemCard";
 import AddItem from "../../components/AdminAddItem/AdminAddItem";
+import ContactCard from "../../components/AdminContactCard/AdminContactCard";
+// import OrderCard from "../../components/AdminOrderCard/AdminOrderCard";
 import AddIcon from "./add-icon.png"
 
 function AdminDashboard() {
 
   const [activeComponent, setActiveComponent] = useState("orderInformation");
+  // const [orders, setOrders] = useState([]);
   const [mobiles, setMobiles] = useState([]);
   const [laptops, setLaptops] = useState([]);
   const [tablets, setTablets] = useState([]);
-  const [addItem, setAddItem] = useState("")
+  const [contacts, setContacts] = useState([]);
+  const [reviews, setReviews] = useState([]);
+  const [addItem, setAddItem] = useState("");
 
   const loadItems = async () =>{
+      // const responseO = await axios.get(`${process.env.REACT_APP_API_URL}/order`);
       const responseM = await axios.get(`${process.env.REACT_APP_API_URL}/mobile`);
       const responseL = await axios.get(`${process.env.REACT_APP_API_URL}/laptop`);
       const responseT = await axios.get(`${process.env.REACT_APP_API_URL}/tablet`);
+      const responseC = await axios.get(`${process.env.REACT_APP_API_URL}/contact`);
+      const responseR = await axios.get(`${process.env.REACT_APP_API_URL}/review`);
 
+      // setOrders(responseO.data.data);
       setMobiles(responseM.data.data);
       setLaptops(responseL.data.data);
       setTablets(responseT.data.data);
+      setContacts(responseC.data.data);
+      setReviews(responseR.data.data);
   }
 
   useEffect(()=>{
@@ -37,7 +48,7 @@ function AdminDashboard() {
         <h1 className="text-center p-3 bg-dark text-white">नमस्ते 🙏 Admin</h1>
         <div className="m-3 mx-4">
           <div className='row'>
-            <div className='col-3 pt-3 shadow rounded-4 bg-dark text-white menu-box'>
+            <div className='col-3 pt-3 shadow rounded-4 bg-dark text-white menu-box-1'>
                 <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item"
                     onClick={() => handleSetActiveComponent("orderInformation")}>
                       Order Information
@@ -54,15 +65,23 @@ function AdminDashboard() {
                     onClick={() => handleSetActiveComponent("review")}>Review</div>
             </div>
             <div className={`col-9 ${activeComponent ? "active" : ""}`}>
-              <div className="shadow w-100 rounded-4 border menu-box">
+              <div className="shadow w-100 rounded-4 border menu-box-2">
                 {activeComponent === "orderInformation" && (
                   <div>
-                    <h1 className="text-center">Order Information</h1><hr />
+                    <h1 className="text-center pt-2 pt-2">Order Information</h1><hr />
+                    {/* <div className="container d-flex flex-wrap justify-content-between">
+                    {
+                        orders.map((order) => {
+                            const {_id, url, title, price, name, address, city, state, code, mob, email, pass, total} = order;
+                            return( <OrderCard key={_id} _id={_id} url={url} title={title} price={price} name={name} address={address} city={city} state={state} code={code} mob={mob} email={email} pass={pass} total={total} loadItems={loadItems} /> )
+                        })
+                    }
+                    </div> */}
                   </div>
                 )}
                 {activeComponent === "mobileInformation" && (
                   <div>
-                    <h1 className="text-center">Mobile Information</h1><hr />
+                    <h1 className="text-center pt-2">Mobile Information</h1><hr />
                     <div className="container d-flex flex-wrap justify-content-between">
                     {
                         mobiles.map((mobile) => {
@@ -80,7 +99,7 @@ function AdminDashboard() {
                 )}
                 {activeComponent === "laptopInformation" && (
                   <div>
-                    <h1 className="text-center">Laptop Information</h1><hr />
+                    <h1 className="text-center pt-2">Laptop Information</h1><hr />
                     <div className="container d-flex flex-wrap justify-content-between">
                     {
                         laptops.map((laptop) => {
@@ -98,7 +117,7 @@ function AdminDashboard() {
                 )}
                 {activeComponent === "tabletInformation" && (
                   <div>
-                    <h1 className="text-center">Tablet Information</h1><hr />
+                    <h1 className="text-center pt-2">Tablet Information</h1><hr />
                     <div className="container d-flex flex-wrap justify-content-between">
                     {
                         tablets.map((tablet) => {
@@ -121,13 +140,29 @@ function AdminDashboard() {
                 )}
                 {activeComponent === "contact" && (
                   <div>
-                    <h1 className="text-center">Contact</h1><hr />
+                    <h1 className="text-center pt-2">Contact</h1><hr />
+                    <div className="container d-flex flex-wrap justify-content-between">
+                    {
+                        contacts.map((contact) => {
+                            const {_id, name, email, message} = contact;
+                            return( <ContactCard key={_id} _id={_id} name={name} email={email} message={message} loadItems={loadItems} type={"contact"} msg={"Message"}/> )
+                        })
+                    }
+                    </div>
                   </div>
                 )}
                 {activeComponent === "review" && (
                   <div>
-                    <h1 className="text-center">Review</h1><hr />
+                  <h1 className="text-center pt-2">Review</h1><hr />
+                  <div className="container d-flex flex-wrap justify-content-between">
+                  {
+                      reviews.map((review) => {
+                          const {_id, name, message} = review;
+                          return( <ContactCard key={_id} _id={_id} name={name} message={message} loadItems={loadItems} type={"review"} msg={"Review"}/> )
+                      })
+                  }
                   </div>
+                </div>
                 )}
               </div>
             </div>

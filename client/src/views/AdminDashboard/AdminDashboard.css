@@ -1,7 +1,10 @@
 .cursor-pointer{
     cursor: pointer;
 }
-.menu-box{
+.menu-box-1{
+    height: 80vh;
+}
+.menu-box-2{
     height: 80vh;
     overflow-y: scroll;
 }

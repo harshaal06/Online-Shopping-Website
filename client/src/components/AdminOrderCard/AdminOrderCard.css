@@ -1,0 +1,15 @@
+.card-with{
+    width: 520px;
+}
+.delete-icon{
+    right: 20px;
+    bottom: 10px;
+    width: 40px;
+    cursor: pointer;
+}
+.update-icon{
+    right: 70px;
+    bottom: 10px;
+    width: 40px;
+    cursor: pointer;
+}

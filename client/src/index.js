@@ -13,7 +13,9 @@ import OrderNow from './views/OrderNow/OrderNow';
 import Login from './views/Login/Login';
 import UserDashboard from './views/UserDashboard/UserDashboard';
 import AdminDashboard from './views/AdminDashboard/AdminDashboard';
+import AdminUpdateDetails from './views/AdminDashboard/AdminUpdateDetails';
 import { Toaster } from 'react-hot-toast';
+
 
 const router = createBrowserRouter([
   {
@@ -55,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: "/admin-dashboard",
     element: <AdminDashboard />
+  },
+  {
+    path: "/admin-update-details",
+    element: <AdminUpdateDetails />
   }
 ])
 
