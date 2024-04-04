@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './TabletCard.css';
 const TabletCard = ({ tablet }) => {
   const { name, content, price, imageUrl } = tablet;
 
@@ -8,8 +8,9 @@ const TabletCard = ({ tablet }) => {
       <img src={imageUrl} alt={name} />
       <div className="tablet-details">
         <h2>{name}</h2>
-        <p>content: {content}</p>
-        <p>Price: ${price}</p>
+        <p> {content}</p>
+        <h4>Price: ₹ {price}</h4>
+        <button className='order-btn'>order now</button>
         {}
       </div>
     </div>
