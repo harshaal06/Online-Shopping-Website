@@ -1,13 +1,8 @@
-.tablet-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 900px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-    display: flex;
-    margin: 10px;
-  }
-  
+   .main-container{
+     height :500px ;
+     width : 1000px ;
+    }
+
   .tablet-container {
     text-align: center;
   }
@@ -16,19 +11,9 @@
     margin-top: 20px;
   }
   
-  .tablet-cards-container {
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
 
 
-   .main-container{
-    height :500px ;
-     width : 1000px ;
 
-    }
 
   
   
