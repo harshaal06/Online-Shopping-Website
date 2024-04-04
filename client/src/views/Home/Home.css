@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.container{
+.container1{
     display: flex;
     justify-content: space-evenly;
     background-color:#eef3f7;

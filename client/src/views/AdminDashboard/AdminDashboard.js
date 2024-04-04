@@ -4,13 +4,13 @@ import './AdminDashboard.css'
 import ItemCard from "../../components/AdminItemCard/ItemCard";
 import AddItem from "../../components/AdminAddItem/AdminAddItem";
 import ContactCard from "../../components/AdminContactCard/AdminContactCard";
-// import OrderCard from "../../components/AdminOrderCard/AdminOrderCard";
+import OrderCard from "../../components/AdminOrderCard/AdminOrderCard";
 import AddIcon from "./add-icon.png"
 
 function AdminDashboard() {
 
   const [activeComponent, setActiveComponent] = useState("orderInformation");
-  // const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([]);
   const [mobiles, setMobiles] = useState([]);
   const [laptops, setLaptops] = useState([]);
   const [tablets, setTablets] = useState([]);
@@ -19,14 +19,14 @@ function AdminDashboard() {
   const [addItem, setAddItem] = useState("");
 
   const loadItems = async () =>{
-      // const responseO = await axios.get(`${process.env.REACT_APP_API_URL}/order`);
+      const responseO = await axios.get(`${process.env.REACT_APP_API_URL}/order`);
       const responseM = await axios.get(`${process.env.REACT_APP_API_URL}/mobile`);
       const responseL = await axios.get(`${process.env.REACT_APP_API_URL}/laptop`);
       const responseT = await axios.get(`${process.env.REACT_APP_API_URL}/tablet`);
       const responseC = await axios.get(`${process.env.REACT_APP_API_URL}/contact`);
       const responseR = await axios.get(`${process.env.REACT_APP_API_URL}/review`);
 
-      // setOrders(responseO.data.data);
+      setOrders(responseO.data.data);
       setMobiles(responseM.data.data);
       setLaptops(responseL.data.data);
       setTablets(responseT.data.data);
@@ -69,14 +69,14 @@ function AdminDashboard() {
                 {activeComponent === "orderInformation" && (
                   <div>
                     <h1 className="text-center pt-2 pt-2">Order Information</h1><hr />
-                    {/* <div className="container d-flex flex-wrap justify-content-between">
+                    <div className="container d-flex flex-wrap justify-content-between">
                     {
                         orders.map((order) => {
-                            const {_id, url, title, price, name, address, city, state, code, mob, email, pass, total} = order;
-                            return( <OrderCard key={_id} _id={_id} url={url} title={title} price={price} name={name} address={address} city={city} state={state} code={code} mob={mob} email={email} pass={pass} total={total} loadItems={loadItems} /> )
+                            const {_id, url, title, price, name, address, city, state, code, mob, email, pass, payment, type} = order;
+                            return( <OrderCard key={_id} _id={_id} url={url} title={title} price={price} name={name} address={address} city={city} state={state} code={code} mob={mob} email={email} pass={pass} payment={payment} type={type} loadItems={loadItems} /> )
                         })
                     }
-                    </div> */}
+                    </div>
                   </div>
                 )}
                 {activeComponent === "mobileInformation" && (
