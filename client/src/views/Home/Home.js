@@ -18,7 +18,7 @@ function App() {
     <div>
       <Navbar />
 
-     <div className='container'> 
+     <div className='container1'> 
       <div className='items'>
         <p className='para'>Our Best Collection For You</p>
 

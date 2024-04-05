@@ -444,7 +444,7 @@ app.delete("/review/:id", async(req, res)=>{
 
 // ORDER
 app.post("/order",async(req, res)=>{
-    const {url, title, price, name, address, city, state, code, mob, email, pass, total} = req.body;
+    const {url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type} = req.body;
 
     if(!name){
         return res.json({
@@ -487,13 +487,49 @@ app.post("/order",async(req, res)=>{
     }
 
     const newOrder = await Order.create({
-        url, title, price, name, address, city, state, code, mob, email, pass, total
+        url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type
     })
 
     res.json({
         success: true,
         message: "Order added successfully",
         data: newOrder
+    })
+})
+app.get("/order",async(req, res)=>{
+
+    const order = await Order.find();
+
+    res.json({
+        success: true,
+        message: "Order featched successfully",
+        data: order
+    })
+})
+app.put("/order/:id", async(req, res)=>{
+    const {id} = req.params;
+
+    const {name, address, city, state, code, mob, email, pass} = req.body;
+
+    await Order.updateOne({ _id: id }, {$set:{
+        name, address, city, state, code, mob, email, pass
+    }})
+
+    res.json({
+        success: true,
+        message: "Order details updated successfully",
+        data: null
+    })
+})
+app.delete("/order/:id", async(req, res)=>{
+    const {id} = req.params;
+
+    await Order.deleteOne({ _id: id })
+
+    res.json({
+        success: true,
+        message: "Order deleted successfully",
+        data: null
     })
 })
 

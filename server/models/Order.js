@@ -3,6 +3,7 @@ import { model, Schema } from "mongoose";
 const orderSchema = new Schema({
     url: String,
     title: String,
+    content: String,
     price: Number,
     name: String,
     address: String,
@@ -12,7 +13,8 @@ const orderSchema = new Schema({
     mob: String,
     email: String,
     pass: String,
-    total: Number
+    payment: String,
+    type: String
 })
 
 const Order = model("Order", orderSchema);
