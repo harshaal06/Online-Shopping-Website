@@ -8,6 +8,7 @@ import Laptop from "./laptop.png"
 import Navbar from '../../components/Navbar/Navbar'
 import Review from './review.jpeg'
 import Star from "./star.png"
+import Footer from "../../components/Footer/Footer"
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <p className='para'>Our Best Collection For You</p>
 
         <h2 className='heading'>Laptop Watch Series</h2>
+
         <p className='para2'>Feature packed at better value than ever powerful sensors to monitor your fitness</p>
 
         <button className='btn'>Shop Now</button>
@@ -96,6 +98,7 @@ function App() {
 
 
     </div>
+    <Footer />
     </div>
     
     
