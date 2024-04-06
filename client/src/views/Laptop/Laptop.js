@@ -18,6 +18,7 @@ function Laptop() {
     loadList(); 
 },[])
 
+
   return (
     <div>
         <Navbar /> 
