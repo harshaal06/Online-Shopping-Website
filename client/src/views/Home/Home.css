@@ -119,5 +119,42 @@
     text-align: center;
     font-weight: bold;
   }
+  .faq-head{
+    text-align: center;
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+  }
+  .details{
+    width: 800px;
+    display: block;
+    margin: 0px auto;
+    background-color:transparent;
+    border-radius: 10px;
+  }
+  .block{
+    background-color: white;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+  }
+  .block:hover{
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .summary{
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border: 2px solid #fff;
+  }
+  .Faq-section{
+    background-color: #eef3f7;
+    margin-bottom: 20px;
+   
+     
+     
+   }
+  
+  
   
   
