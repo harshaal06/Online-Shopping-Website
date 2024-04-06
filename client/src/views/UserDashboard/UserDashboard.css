@@ -1,0 +1,21 @@
+.body{
+    height: 100vh;
+}.bag{
+    background-color: #fb5f04;
+    width: 110px;
+}
+.bod{
+    border: 1px solid #fb5f04;
+    width: 110px;
+}
+.menu-box-user{
+    height: 70vh;
+}
+.imd-pro{
+    height: 200px;
+    width: 200px;
+}
+.imd-pro-1{
+    height: 280px;
+    width: 280px;
+}

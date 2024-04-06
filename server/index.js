@@ -7,6 +7,9 @@ dotenv.config();
 import Mobile from "./models/Mobile.js";
 import Laptop from "./models/Laptop.js";
 import Tablet from "./models/Tablet.js";
+import Contact from "./models/Contact.js";
+import Review from "./models/Review.js";
+import Order from "./models/Order.js";
 
 const app = express();
 app.use(cors());
@@ -327,6 +330,205 @@ app.delete("/tablet/:id", async(req, res)=>{
     res.json({
         success: true,
         message: "Tablet details deleted successfully",
+        data: null
+    })
+})
+
+// CONTACT
+
+app.post("/contact",async(req, res)=>{
+    const {name, email, message} = req.body;
+
+    if(!name){
+        return res.json({
+            success: false,
+            message: "Name is required",
+            data: null
+        })
+    }
+
+    if(!message){
+        return res.json({
+            success: false,
+            message: "Message is required",
+            data: null
+        })
+    }
+
+    const newContact = await Contact.create({
+        "name": name,
+        "email": email,
+        "message": message
+    })
+
+    res.json({
+        success: true,
+        message: "Contact added successfully",
+        data: newContact
+    })
+})
+app.get("/contact",async(req, res)=>{
+
+    const contact = await Contact.find();
+
+    res.json({
+        success: true,
+        message: "Contact featched successfully",
+        data: contact
+    })
+})
+app.delete("/contact/:id", async(req, res)=>{
+    const {id} = req.params;
+
+    await Contact.deleteOne({ _id: id })
+
+    res.json({
+        success: true,
+        message: "Contact deleted successfully",
+        data: null
+    })
+})
+
+// REVIEW
+app.post("/review",async(req, res)=>{
+    const {name, message} = req.body;
+
+    if(!name){
+        return res.json({
+            success: false,
+            message: "Name is required",
+            data: null
+        })
+    }
+
+    if(!message){
+        return res.json({
+            success: false,
+            message: "Review is required",
+            data: null
+        })
+    }
+
+    const newReview = await Review.create({
+        "name": name,
+        "message": message
+    })
+
+    res.json({
+        success: true,
+        message: "Review added successfully",
+        data: newReview
+    })
+})
+app.get("/review",async(req, res)=>{
+
+    const review = await Review.find();
+
+    res.json({
+        success: true,
+        message: "Review featched successfully",
+        data: review
+    })
+})
+app.delete("/review/:id", async(req, res)=>{
+    const {id} = req.params;
+
+    await Review.deleteOne({ _id: id })
+
+    res.json({
+        success: true,
+        message: "Review deleted successfully",
+        data: null
+    })
+})
+
+// ORDER
+app.post("/order",async(req, res)=>{
+    const {url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type} = req.body;
+
+    if(!name){
+        return res.json({
+            success: false,
+            message: "Name is required",
+            data: null
+        })
+    }
+
+    if(!address){
+        return res.json({
+            success: false,
+            message: "Address is required",
+            data: null
+        })
+    }
+
+    if(!mob){
+        return res.json({
+            success: false,
+            message: "Mob No is required",
+            data: null
+        })
+    }
+
+    if(!email){
+        return res.json({
+            success: false,
+            message: "Email is required",
+            data: null
+        })
+    }
+
+    if(!pass){
+        return res.json({
+            success: false,
+            message: "Password is required",
+            data: null
+        })
+    }
+
+    const newOrder = await Order.create({
+        url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type
+    })
+
+    res.json({
+        success: true,
+        message: "Order added successfully",
+        data: newOrder
+    })
+})
+app.get("/order",async(req, res)=>{
+
+    const order = await Order.find();
+
+    res.json({
+        success: true,
+        message: "Order featched successfully",
+        data: order
+    })
+})
+app.put("/order/:id", async(req, res)=>{
+    const {id} = req.params;
+
+    const {name, address, city, state, code, mob, email, pass} = req.body;
+
+    await Order.updateOne({ _id: id }, {$set:{
+        name, address, city, state, code, mob, email, pass
+    }})
+
+    res.json({
+        success: true,
+        message: "Order details updated successfully",
+        data: null
+    })
+})
+app.delete("/order/:id", async(req, res)=>{
+    const {id} = req.params;
+
+    await Order.deleteOne({ _id: id })
+
+    res.json({
+        success: true,
+        message: "Order deleted successfully",
         data: null
     })
 })
