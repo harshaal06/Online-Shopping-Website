@@ -10,18 +10,20 @@ function About() {
         
         <div class="name">
             <p> About Us ..</p>
+            
 
             <div class="paragraph">
                 <p> Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app..</p>
                     
             </div>
             </div>
+           
         
     <div className="mt-3 pb-5">
     <div className="container">
       <div className="row">
         <div className="my-md-5 my-sm-0 d-flex flex-wrap flex-wrap justify-content-around">
-          <img src="" className="col-md-6"></img>
+          <img src="/client/src/views/About/About.img.png" class="imges"></img>
           <div className="card col-md-5 col-xs-12 shadow p-md-4 px-5 w-xs-100 w-md-auto">
             <h4 className="my-3">WRITE A REVIEW</h4>
             <p className="mb-2">Name : </p>
@@ -43,12 +45,15 @@ function About() {
     <div className="container">
       <h1 className="text-center mb-4">WHAT PEOPLE SAY</h1>
       <div className="row">
-        <div className="r-bag d-flex flex-wrap justify-content-evenly p-md-4" id="review-Box">
-            dnfndfndfnwnnfnww
+        <div className="r-bag d-flex flex-wrap justify-content-evenly p-md-4" id="review-Box"></div>
+            
+            <div class="card">
+              
+            </div>
         </div>
       </div>
     </div>
-  </div>
+ 
     </div>
   )
 }
