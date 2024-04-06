@@ -15,6 +15,7 @@ import UserDashboard from './views/UserDashboard/UserDashboard';
 import AdminDashboard from './views/AdminDashboard/AdminDashboard';
 import AdminUpdateDetails from './views/AdminDashboard/AdminUpdateDetails';
 import { Toaster } from 'react-hot-toast';
+import LaptopBlog from './views/LaptopBlog/LaptopBlog';
 
 
 const router = createBrowserRouter([
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "/check-order",
     element: <UserDashboard />
+  },
+  {
+    path: "/laptop-blog/:id",
+    element: <LaptopBlog />
   },
   {
     path: "/admin-dashboard",
