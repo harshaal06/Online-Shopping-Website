@@ -1,7 +1,7 @@
 import React, { useState ,useEffect } from 'react'
 import './LaptopBlog.css'
 import axios from 'axios';
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
@@ -42,6 +42,9 @@ function LaptopBlog()
         <h1 className='list-title-1'> {title}</h1>
         <p className='list-content-1'> {content}</p> 
         <h2 className='list-price-1'>₹ {price}</h2>
+
+       
+
 
         </div>
         <Footer/>

@@ -11,8 +11,8 @@ function ListCard({_id,url,title,content,price}) {
 
         <img src={url} alt='laptopimg' className='list-img'/>
         <h1 className='list-title'>{title}</h1>
-        <p className='list-content'>{content.substring(0,150)} {title.length > 20 ? "..." : null}</p>
-        <Link to={`/laptop-blog/${_id}`}>Read More</Link>
+        <p className='list-content'>{content.substring(0,140)} {title.length > 20 ? "..." : <Link to={`/laptop-blog/${_id}`}>Read More</Link>}</p>
+        
         <h2 className='list-price'>₹ {price}</h2>
 
         </div>
