@@ -4,6 +4,10 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import Navbar from '../../components/Navbar/Navbar';
 import { Link } from "react-router-dom";
+import Profile from './user.png'
+import Order from './order.png'
+import Edit from './edit.png'
+import Logout from './logout.png'
 
 function UserDashboard() {
   const [activeTab, setActiveTab] = useState("login");
@@ -111,14 +115,18 @@ function UserDashboard() {
     setActiveComponent(component);
   };
 
+  const logout = ()=> {
+    window.location.href = '/'
+  }
+
   return (
     <div className="body">
     {activeTab === "login" && (
       <div>
       <Navbar />
-      <div className="container">
+      <div className="container pt-4">
           <div className='col-12 col-sm-5 card m-auto shadow p-4 mt-5'>
-            <h3 className="text-center mb-3">Login</h3>
+            <h3 className="text-center mb-3">Login</h3><hr />
             <p className="mb-2">Email : </p>
                 <input type='email'
                 placeholder='email@example.com'
@@ -126,7 +134,7 @@ function UserDashboard() {
                 onChange={(e)=>{
                     setLoginEmail(e.target.value)
                 }} 
-                className='mb-3 p-2 px-3 rounded border border-black'/>
+                className='mb-4 p-2 px-3 rounded border border-black'/>
 
             <p className="mb-2 col-6">Password : </p>
             <input type='password'
@@ -135,7 +143,7 @@ function UserDashboard() {
               onChange={(e)=>{
                 setLoginPass(e.target.value)
               }} 
-              className='mb-2 p-2 px-3 rounded border border-black'/>
+              className='mb-3 p-2 px-3 rounded border border-black'/>
             <Link to="/contact" className="mb-3">Forgot your password?</Link>
 
             <button type='button' onClick={login} className="w-100 mt-2 py-2 rounded border bag">Login</button>
@@ -149,7 +157,15 @@ function UserDashboard() {
         <h1 className="text-center p-3 bg-dark text-white">Hello 👋 {userData.name}</h1>
         <div className="m-3 mx-4">
           <div className='row'>
-            <div className='col-2 pt-3 shadow rounded-4 bg-dark text-white menu-box-user'>
+            <div className="container d-block d-md-none col-12 rounded-4 bg-dark text-white mb-3">
+              <div className="d-flex justify-content-evenly p-2">
+                <img src={Profile} className="icon-ht" onClick={() => handleSetActiveComponent("profile")}/>
+                <img src={Order} className="icon-ht" onClick={() => handleSetActiveComponent("oderDetails")}/>
+                <img src={Edit} className="icon-ht" onClick={() => handleSetActiveComponent("editProfile")}/>
+                <img src={Logout} className="icon-ht" onClick={logout}/>
+              </div>
+            </div>
+            <div className='col-2 pt-3 shadow rounded-4 bg-dark text-white menu-box-user d-none d-md-block'>
                 <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item"
                     onClick={() => handleSetActiveComponent("profile")}>
                       Profile
@@ -158,19 +174,21 @@ function UserDashboard() {
                     onClick={() => handleSetActiveComponent("oderDetails")}>Order Details</div>
                 <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 cursor-pointer dash-item"
                     onClick={() => handleSetActiveComponent("editProfile")}>Edit Profile</div>
+                <div className="fs-5 m-2 my-3 p-2 px-4 rounded-4 bg-danger cursor-pointer text-center"
+                    onClick={logout}>Logout</div>
             </div>
-            <div className={`col-10 ${activeComponent ? "active" : ""}`}>
+            <div className={`col-12 col-md-10 ${activeComponent ? "active" : ""}`}>
               <div className="shadow w-100 rounded-4 card border-dark menu-box-user">
                 {activeComponent === "profile" && (
                   <div>
                     <h1 className="text-center pt-2 pt-2">Profile</h1><hr />
                     <div className="container">
-                      <div className="row">
-                        <div className="col-4 border-end border-dark">
+                      <div className="row mb-4">
+                        <div className="col-12 col-md-4 border-end border-dark">
                             <img src={`https://i.pravatar.cc/?img=${mob.substring(0,2)}`} className="col-6 m-4 imd-pro d-block mx-auto rounded-circle border border-dark"/>
                             <p className="fs-1 text-center">{name}</p>
                         </div>
-                        <div className="col-8">
+                        <div className="col-12 col-md-8 text-center text-md-start">
                           <div className="row">
                             <h5 className="my-3">Contact Details</h5>
                               <p className="my-1 mx-3"><span className="fw-semibold">Email: </span>{email}</p>
@@ -193,11 +211,11 @@ function UserDashboard() {
                     <h1 className="text-center pt-2">Order Details</h1><hr />
                     <div className="container">
                     <div class="card m-3">
-                      <div class="row g-0">
-                        <div class="col-md-3">
+                      <div class="row g-0 text-center text-md-start">
+                        <div class="col-md-3 col-12">
                           <img src={url} class="img-fluid rounded-start" alt="..." />
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 col-12">
                           <div class="card-body">
                             <h5 class="card-title">{title}</h5>
                             <p class="card-text">{content}</p>
@@ -208,7 +226,7 @@ function UserDashboard() {
                         </div>
                       </div>
                     </div>
-                    <button type='button' onClick={cancelOrder} className="mt-3 py-2 rounded border bag-c d-block mx-auto">Cancel Order</button>
+                    <button type='button' onClick={cancelOrder} className="mt-3 py-2 rounded border bag-c d-block mx-auto mb-4">Cancel Order</button>
                     </div>
                   </div>
                 )}
@@ -217,7 +235,7 @@ function UserDashboard() {
                   <h1 className="text-center pt-2 pt-2">Edit Profile</h1><hr />
                   <div className="container">
                     <div className="row">
-                      <div className="col-4 border-end border-dark">
+                      <div className="col-12 col-md-4 border-end border-dark">
                           <img src={`https://i.pravatar.cc/?img=${mob.substring(0,2)}`} className="col-6 m-4 imd-pro d-block mx-auto rounded-circle border border-dark"/>
                           <p className="fs-5 text-center">
                             <span className="mb-2">Name : </span>
@@ -232,7 +250,7 @@ function UserDashboard() {
                             </p>
                             
                       </div>
-                      <div className="col-8">
+                      <div className="col-12 col-md-8 text-center text-md-start mb-4">
                         <div className="row">
                           <h5 className="my-3">Contact Details</h5>
                             <p className="my-1 mx-3"><span className="fw-semibold">Email: </span>

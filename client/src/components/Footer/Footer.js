@@ -1,72 +1,57 @@
 import React from 'react'
 import "./Footer.css"
-import Facebook from "./facebook.png"
-import Twitter from "./Twitter.png"
 import { Link } from 'react-router-dom'
-
+import Facebook from './facebook.png'
+import Instagram from './instagram.png'
+import Linkedin from './linkedin.png'
+import Twitter from './twitter.png'
+import Gadgets from './gadgets.png'
 
 function Footer() {
   return (
-    <div>
-    <div  className='Footer'>
-      <div className='Footer-subitem'>
-        <p className='Heading'>Ecomerce Website</p>
-        <p className='sub-Heading'>"Thank you for visiting our e-commerce website. Explore our range of products and enjoy secure shopping with us."</p>
-      </div>
-      <div className='Footer-subitem'>
-      <p className='Heading'>Quick Links</p>
-        <ul type="none" className='list-items2'>
-          <li className='list'><Link to="/">Home</Link></li>
-          <li className='list'><Link to="/contact">Contact</Link></li>
-          <li className='list'><Link to="/about">About us</Link></li>
-          <li className='list'>
-            <Link to="/check-order">Login</Link></li>
-        </ul>
-        
-      </div>
-      <div className='Footer-subitem'>
-      <p className='Heading'>Social Media</p>
-        <ul type="none" className='List-items'>
-          <li className='Logo-img'><img src={Facebook} className='facebook-img' alt=""/> Facebook</li>&nbsp;
-          <li className='Logo-img'><img src={Twitter} className='facebook-img' alt=""/> Twitter</li>
-          
-        </ul>
-
-      </div>
-      <div className='Footer-subitem'>
-
-      <p className="Heading"> <b> For Customer Support </b> </p>
-                <ul className="list" type="none">
-                    <li> <Link to="tel: +91 5454545454"> Contact No: +91 9172897793 </Link> </li> 
-                    <li> <Link to="mailto: kibble@gmail.com"> Mail To: Ecomerce@gmail.com </Link> </li>
-                </ul>
-        
-      </div>
-
-      
-
-
-    </div>
-    <div className='rights'>
-    Copyright &#169; Eommerce@gmail.com  | All right are reserved.
-
+    <div className='bg-dark mt-5'>
+    <div className='container'>
+        <div class="row d-flex justify-content-around text-light py-3 pb-0">
+          <div class="col-md-4 col-sm-12 mt-4 text-center">
+            <img src={Gadgets} class="w-25 mb-4" />
+            <h2 class="fw-bold">Website Name</h2>
+            <p class="fw-light m-0">To develop a knowledge based society with clarity of thoughts and charity at hearts to serve humanity with integrity.</p>
+          </div>
+          <div class="col-md-2 col-sm-12 mt-4 text-center text-md-start">
+            <p class="fs-5 m-0">Quick Links</p>
+            <ul>
+              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">About us</li></Link>
+              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Contact us</li></Link>
+              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Review</li></Link>
+              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Login</li></Link>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-12 mt-4 text-center text-md-start">
+            <p class="fs-5 m-0">Products</p>
+            <ul>
+              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Laptops</li></Link>
+              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Tablets</li></Link>
+              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Mobiles</li></Link>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-12 mt-4 text-center text-md-start">
+            <p class="fs-5 m-0">Contact</p>
+            <ul>
+              <li class="list-group-item my-2">📌 84, collegeName, Laxmi Narayan Chowk, Opposite Narayana Residency, Ward No 3, Prasad Colony, Nagpur - 441108</li>
+              <li class="list-group-item my-2">📱<a href="mob:8010564343" class="text-decoration-none">+91 8010564343</a></li>
+              <li class="list-group-item my-2">✉️<a href="mailto:hemantagl206@gmail.com" class="text-decoration-none"> heritagehorizon@gmail.com</a></li>
+              <li class="list-group-item my-3">
+                <a href="#"><img src={Linkedin} alt="" className="icon-h" /></a>
+                <a href="#"><img src={Twitter} alt="" className="icon-h" /></a>
+                <a href="#"><img src={Facebook} alt="" className="icon-h" /></a>
+                <a href="#"><img src={Instagram} alt="" className="icon-h" /></a>
+              </li>
+            </ul>
+          </div>
+          <p class="text-center pt-4">Copyright © <a href="https://harshal-aglawe.vercel.app/" class="text-decoration-none text-light">harshal-aglawe</a> 2024</p>
+        </div>
     </div>
     </div>
-    
-    
-
-    
-    
-
-      
-      
-
-
-
-
-
-
-    
   )
 }
 
