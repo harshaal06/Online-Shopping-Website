@@ -1,0 +1,23 @@
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .order-btn {
+    background-color: #fb5f04;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .order-btn:hover {
+    background-color: #fb5f04;
+    transform: scale(1.05);
+  }
+  
+  /* You can keep the rest of the styles as they are */
+  
