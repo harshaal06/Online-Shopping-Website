@@ -1,16 +1,20 @@
 import React from 'react';
 import './TabletCard.css';
+import {Link} from 'react-router-dom';
+
 const TabletCard = ({ tablet }) => {
-  const { name, content, price, imageUrl } = tablet;
+  const  {_id,url,title,content,price}  = tablet;
+  
 
   return (
     <div className="tablet-card">
-      <img src={imageUrl} alt={name} />
+      <img src={url} alt={title} />
       <div className="tablet-details">
-        <h2>{name}</h2>
+        <h2>{title}</h2>
         <p> {content}</p>
         <h4>Price: ₹ {price}</h4>
-        <button className='order-btn'>order now</button>
+        <Link to={`/tablet-blog/${_id}`}>
+        <button className='order-btn'>Read more ...</button></Link>
         {}
       </div>
     </div>
