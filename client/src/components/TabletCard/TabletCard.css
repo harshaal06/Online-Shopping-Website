@@ -1,4 +1,4 @@
-.body {
+body {
     background-color: #eef3f7;
 }
 
@@ -7,7 +7,7 @@
 }
 
 .tablet-card {
-    width: 400px; 
+    width: 380px; 
     height: 400px;
     border-radius: 8px;
     padding: 20px;
@@ -20,7 +20,7 @@
 }
 
 .tablet-card:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
 .tablet-image {
@@ -28,6 +28,7 @@
     height: 20px;
     object-fit: cover;
     border-radius: 8px;
+    margin-top: 10px;
 }
 
 
@@ -35,11 +36,13 @@
     font-size: 18px;
     font-weight: bold;
     margin: 0; 
+    margin-top: 5px;
 }
 
 .tablet-details p {
     font-size: 14px;
     margin: 5px 0; 
+    margin-top: 5px;
 }
 
 .tablet-details h4 {
@@ -50,7 +53,7 @@
 .order-btn {
     background-color: #fb5f04;
     border: none;
-    padding: 8px 16px;
+    padding: 6px 14px;
     margin-top: 15px;
     border-radius: 4px;
     cursor: pointer;
@@ -60,4 +63,29 @@
 .order-btn:hover {
     background-color: #fb5f04;
     transform: scale(1.05);
+}
+
+@media screen and (max-width: 500px) {
+    .tablet-card {
+        width: 90%; 
+        height: 380px;
+        max-width: 300px;
+    }
+
+    .tablet-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .tablet-details h2 {
+        font-size: 16px;
+    }
+
+    .tablet-details p {
+        font-size: 12px;
+    }
+
+    .tablet-details h4 {
+        font-size: 14px;
+    }
 }

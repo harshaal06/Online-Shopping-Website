@@ -36,7 +36,10 @@ function TabletBlog()
         <img src={url} alt='laptopimg' className='list-img-1'/>
         <h1 className='list-title-1'> {title}</h1>
         <p className='list-content-1'> {content}</p> 
-        <h2 className='list-price-1'>₹ {price}</h2>
+        <h3 className='list-price-1'>₹ {price}</h3>
+        <div className='button-container'>
+        <button className='order-btn'>order now</button>
+        </div>
         </div>
         <Footer/>
     </div>
