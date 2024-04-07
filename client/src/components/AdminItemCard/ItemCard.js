@@ -21,7 +21,7 @@ function NoteCard({_id, url, title, content, price, loadItems, type}) {
             <img src={url} className="img-fluid rounded-start p-3" />
             </div>
             <div className="col-md-8">
-            <div className="card-body">
+            <div className="card-body text-center text-md-start">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{content}</p>
                 <p className="card-text"><small className="text-body-secondary">Rs. {price}</small></p>

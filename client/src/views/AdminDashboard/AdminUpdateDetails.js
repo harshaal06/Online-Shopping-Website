@@ -50,7 +50,8 @@ function AdminUpdateDetails() {
 
   return (
     <div className='body'>
-      <h1 className="text-center">Add {type}{id}</h1><hr />
+      <h1 className="text-center">Add {type}</h1>
+      <p className='text-center'>{id}</p><hr />
       <div className="container">
           <div className='col-12 col-sm-7 card m-auto shadow p-4 mt-4'>
             <p className="mb-2">Url : </p>

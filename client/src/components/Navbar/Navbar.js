@@ -33,6 +33,9 @@ function Navbar() {
             <Link to="/contact" className="nav-link ms-md-2 ms-md-0 ">Contact</Link>
           </li>
           <li className="nav-item">
+            <Link to="/order-now" className="nav-link ms-md-2 ms-md-0 ">Order Now</Link>
+          </li>
+          <li className="nav-item">
             <Link to="/check-order" className="nav-link ms-md-2 ms-md-0  me-5 rounded active border bag text-center">Login</Link>
           </li>
         </ul>
