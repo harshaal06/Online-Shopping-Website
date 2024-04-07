@@ -38,3 +38,53 @@ text-align: center;
 font-family: 25px;
 margin-top: 10px;
 }
+@media screen and (max-width: 350px ){
+    .list-img{
+        height: 100px;
+     }
+     .list-card{
+        width: 250px; 
+        height: 370px;
+    }
+    .list-title{
+        text-align: center;
+        font-weight: 800;
+        font-size: 15px;
+       
+        
+        }
+        .list-content{
+       
+        font-size: 15px;
+        }
+        .list-price{
+        font-family: 17px;
+        
+        }
+}
+@media screen and (min-width: 350px) and (max-width: 800px) {
+    .list-img{
+        height: 100px;
+     }
+     .list-card{
+        width: 350px; 
+        height: 370px;
+        margin-bottom: 50px;
+
+    }
+    .list-title{
+        text-align: center;
+        font-weight: 800;
+        font-size: 15px;
+       
+        
+        }
+        .list-content{
+       
+        font-size: 15px;
+        }
+        .list-price{
+        font-family: 17px;
+        
+        }
+}

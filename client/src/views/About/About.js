@@ -11,11 +11,18 @@ function About() {
         <div class="name">
             <p> About Us ..</p>
             
+            <div className="about-con">
 
-            <div class="paragraph">
-                <p> Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app..</p>
-                    
+              <div className="about-card">
+              <p className="about-title">  Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app Alternatively called a notebook, a laptop is a portable computer that is more efficient and nearly as powerful as a desktop computer. Portable computers run off AC power or batteries such as NiMH (nickel-metal hydride), NiCad, or Li-ion packs, for several hours.</p>
+              </div>
+
+              <div className="about-card">
+              <img src="https://png.pngtree.com/background/20231030/original/pngtree-d-rendering-of-advanced-tech-devices-laptop-phone-tablet-and-computer-picture-image_5791662.jpg" className="about-img"/>
+              </div>
+
             </div>
+               
             </div>
            
         

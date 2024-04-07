@@ -18,12 +18,12 @@ function Laptop() {
     loadList(); 
 },[])
 
-
   return (
     <div>
         <Navbar /> 
  
              <img src='https://supertechwebstore.com/wp-content/uploads/2023/05/ef8083bfe79088dc00bd8eca9c821cd5.jpg' className='img'/>
+             <h2 className='hading-1'>"To ensure that your data doesn't fall into the wrong hands, it's essential to perform a low-level formatting of your hard disk before selling your laptop. This process not only erases your data but also overwrites it with random information, making data recovery extremely difficult. 💡 Steps to Safeguard Your..." </h2>
             <div className='Card-container'>
              {
               laptopList.map((list,index)=>{
