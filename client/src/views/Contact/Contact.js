@@ -97,7 +97,7 @@ export default function Contact() {
               <label htmlFor="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" className="btn22" />
+           
           </form>
         </div>
       </div>
