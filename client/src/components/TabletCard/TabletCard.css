@@ -65,3 +65,27 @@ body {
     transform: scale(1.05);
 }
 
+@media screen and (max-width: 500px) {
+    .tablet-card {
+        width: 90%; 
+        height: 380px;
+        max-width: 300px;
+    }
+
+    .tablet-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .tablet-details h2 {
+        font-size: 16px;
+    }
+
+    .tablet-details p {
+        font-size: 12px;
+    }
+
+    .tablet-details h4 {
+        font-size: 14px;
+    }
+}
