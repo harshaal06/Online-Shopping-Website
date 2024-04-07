@@ -9,10 +9,10 @@ const TabletCard = ({ _id,url,title,content,price }) => {
       <img src={url} alt={title} className='img-wth'/>
       <div className="tablet-details">
         <h2>{title}</h2>
-        <p> {content}</p>
-        <h4>Price: ₹ {price}</h4>
-        <Link to={`/tablet-blog/${_id}`}>
-        <button className='order-btn'>Read more ...</button></Link>
+        <p>{content.substring(0,50)}. . .<Link to={`/tablet-blog/${_id}`} className='text-decoration-none'>Read more</Link></p>
+        
+        
+        <h4 className='mt-3'>Price: ₹ {price}</h4>
       </div>
     </div>
   );
