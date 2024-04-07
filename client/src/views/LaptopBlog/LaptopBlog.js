@@ -43,7 +43,8 @@ function LaptopBlog()
         <p className='list-content-1'> {content}</p> 
         <h2 className='list-price-1'>₹ {price}</h2>
 
-       
+        <button type='button' className='order-btn-1'><Link className='likn' to={`/Order-now`}>Order Now</Link></button>
+        
 
 
         </div>
