@@ -3,6 +3,7 @@ import './Laptop.css'
 import Navbar from '../../components/Navbar/Navbar'
 import axios from 'axios'
 import ListCard from '../../components/ListCard/ListCard';
+import Footer from '../../components/Footer/Footer';
 
 function Laptop() {
   const [laptopList,setLaptopList] = useState([]);
@@ -17,11 +18,12 @@ function Laptop() {
     loadList(); 
 },[])
 
+
   return (
     <div>
-        <Navbar />
-        <h1 style={{textAlign: 'center',margin: '50px',fontSize: '70px'}}> Laptop💻 </h1>
+        <Navbar /> 
  
+             <img src='https://supertechwebstore.com/wp-content/uploads/2023/05/ef8083bfe79088dc00bd8eca9c821cd5.jpg' className='img'/>
             <div className='Card-container'>
              {
               laptopList.map((list,index)=>{
@@ -34,7 +36,7 @@ function Laptop() {
              }
             </div>
          
-
+   <Footer/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 .body{
     height: 100vh;
-}.bag{
+}
+.bag{
     background-color: #fb5f04;
     width: 110px;
 }
@@ -8,8 +9,12 @@
     border: 1px solid #fb5f04;
     width: 110px;
 }
+.bag-c{
+    background-color: #fb5f04;
+    width: 150px;
+}
 .menu-box-user{
-    height: 70vh;
+    height: 75vh;
 }
 .imd-pro{
     height: 200px;

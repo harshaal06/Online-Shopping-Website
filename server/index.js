@@ -509,10 +509,10 @@ app.get("/order",async(req, res)=>{
 app.put("/order/:id", async(req, res)=>{
     const {id} = req.params;
 
-    const {name, address, city, state, code, mob, email, pass} = req.body;
+    const {url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type} = req.body;
 
     await Order.updateOne({ _id: id }, {$set:{
-        name, address, city, state, code, mob, email, pass
+        url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type
     }})
 
     res.json({

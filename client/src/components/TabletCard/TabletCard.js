@@ -1,17 +1,18 @@
 import React from 'react';
 import './TabletCard.css';
-const TabletCard = ({ tablet }) => {
-  const { name, content, price, imageUrl } = tablet;
+import {Link} from 'react-router-dom';
 
+const TabletCard = ({ _id,url,title,content,price }) => {
+  
   return (
-    <div className="tablet-card">
-      <img src={imageUrl} alt={name} />
+    <div className="tablet-card card">
+      <img src={url} alt={title} className='img-wth'/>
       <div className="tablet-details">
-        <h2>{name}</h2>
-        <p> {content}</p>
-        <h4>Price: ₹ {price}</h4>
-        <button className='order-btn'>order now</button>
-        {}
+        <h2>{title}</h2>
+        <p>{content.substring(0,50)}. . .<Link to={`/tablet-blog/${_id}`} className='text-decoration-none'>Read more</Link></p>
+        
+        
+        <h4 className='mt-3'>Price: ₹ {price}</h4>
       </div>
     </div>
   );

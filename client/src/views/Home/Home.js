@@ -98,6 +98,30 @@ function App() {
 
 
     </div>
+
+    <div className='Faq-section'>
+      <h1 className='faq-head'>Frequently Asked's Question's</h1>
+
+
+    <details className='details'>
+                    <summary className="summary">What is your return/exchange policy?</summary>
+                    <div className='block'>Another pressing question that every retail brand is tired of answering: how do you handle returns and exchanges? In addition to having a dedicated section or page regarding the return and exchange process on your website (do you have one yet?), you should have a question and answer on your FAQ page that explains it to your shoppers.</div>
+    </details>
+
+    <details  className='details'>
+                    <summary className="summary">What payment methods do you accept?</summary>
+                    <div className='block'>There are a growing number of options for paying for transactions online. From credit cards and debit cards to electronic wallets, people want more and more versatility in their online shopping. You don’t have to offer it all, but make sure that you’re explicit about what you do accep</div>
+    </details>
+
+    <details  className='details'>
+                    <summary className="summary">Do you have gift packaging options?</summary>
+                    <div className='block'>People love buying gifts online, and especially if they can ship them straight to the recipient. Therefore, they’ll often want an option where the invoice is left out of the box or pricing is excluded. Perhaps they’re shipping it to themselves but want a gift receipt for the person getting it</div>
+    </details>
+    <details  className='details'>
+                    <summary className="summary">How do I cancel/modify an order?</summary>
+                    <div className='block'>This might seem like something that you want to deter, but it’s bound to happen in every business. Therefore, the best thing that you can do, again, is to be transparent and honest with your audience about how it works.</div>
+    </details>
+    </div>
     <Footer />
     </div>
     
