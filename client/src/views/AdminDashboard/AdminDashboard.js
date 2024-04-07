@@ -69,11 +69,11 @@ function AdminDashboard() {
                 {activeComponent === "orderInformation" && (
                   <div>
                     <h1 className="text-center pt-2 pt-2">Order Information</h1><hr />
-                    <div className="container d-flex flex-wrap justify-content-between">
+                    <div className="container">
                     {
                         orders.map((order) => {
-                            const {_id, url, title, price, name, address, city, state, code, mob, email, pass, payment, type} = order;
-                            return( <OrderCard key={_id} _id={_id} url={url} title={title} price={price} name={name} address={address} city={city} state={state} code={code} mob={mob} email={email} pass={pass} payment={payment} type={type} loadItems={loadItems} /> )
+                            const {_id, url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type} = order;
+                            return( <OrderCard key={_id} _id={_id} url={url} title={title} content={content} price={price} name={name} address={address} city={city} state={state} code={code} mob={mob} email={email} pass={pass} payment={payment} type={type} loadItems={loadItems} /> )
                         })
                     }
                     </div>
@@ -90,8 +90,7 @@ function AdminDashboard() {
                         })
                     }
                     <img src={AddIcon}
-                      className={`position-fixed add-icon shadow-lg border border-dark-subtle p-2 rounded-circle ${
-                        activeComponent === "depositAmount" ? "active" : ""}`}
+                      className="position-fixed add-icon shadow-lg border border-dark-subtle p-2 rounded-circle"
                         onClick={() => {handleSetActiveComponent("addItem")
                         setAddItem("mobile")}}/>
                     </div>
@@ -126,8 +125,7 @@ function AdminDashboard() {
                         })
                     }
                     <img src={AddIcon}
-                      className={`position-fixed add-icon shadow-lg border border-dark-subtle p-2 rounded-circle ${
-                        activeComponent === "depositAmount" ? "active" : ""}`}
+                      className="position-fixed add-icon shadow-lg border border-dark-subtle p-2 rounded-circle"
                         onClick={() => {handleSetActiveComponent("addItem")
                         setAddItem("tablet")}}/>
                     </div>

@@ -16,6 +16,7 @@ import AdminDashboard from './views/AdminDashboard/AdminDashboard';
 import AdminUpdateDetails from './views/AdminDashboard/AdminUpdateDetails';
 import { Toaster } from 'react-hot-toast';
 import LaptopBlog from './views/LaptopBlog/LaptopBlog';
+import TabletBlog from './views/TabletBlog/TabletBlog';
 
 
 const router = createBrowserRouter([
@@ -56,11 +57,15 @@ const router = createBrowserRouter([
     element: <LaptopBlog />
   },
   {
+    path: "/tablet-blog/:id",
+    element: <TabletBlog />
+  },
+  {
     path: "/admin-dashboard",
     element: <AdminDashboard />
   },
   {
-    path: "/admin-update-details",
+    path: "/admin-update-details/:type/:id",
     element: <AdminUpdateDetails />
   }
 ])

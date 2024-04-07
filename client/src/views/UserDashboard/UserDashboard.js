@@ -13,6 +13,23 @@ function UserDashboard() {
   const [orders, setOrders] = useState([]);
   const [userData, setUserData] = useState([]);
 
+  const [id, setId] = useState('');
+  const [name, setName] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [code, setCode] = useState('');
+  const [mob, setMob] = useState('');
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
+  
+  const [url, setUrl] = useState('');
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+  const [price, setPrice] = useState('');
+  const [payment, setPayment] = useState('');
+  const [type, setType] = useState('');
+
   const loadItem = async () =>{
     const response = await axios.get(`${process.env.REACT_APP_API_URL}/order`);
 
@@ -28,7 +45,7 @@ function UserDashboard() {
     }
     else{
       orders.map((order) => {
-        const {_id, url, title, price, name, address, city, state, code, mob, email, pass, payment, type} = order;
+        const {_id, url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type} = order;
         if(loginEmail===email){
           if(loginPass!==pass){
             toast.error("Incorrect password ");
@@ -38,36 +55,56 @@ function UserDashboard() {
             toast.success("Successfully Login");
             setUserData(order);
             setActiveTab("main");
+            setId(_id);
+            setName(name);
+            setAddress(address);
+            setCity(city);
+            setState(state);
+            setCode(code);
+            setMob(mob);
+            setEmail(email);
+            setPass(pass);
+            setUrl(url);
+            setTitle(title);
+            setContent(content);
+            setPrice(price);
+            setType(type);
+            setPayment(payment);
             return;
           }
         }
       })
     }
-}
+  }
+
+  const updateData = async() => {
+    const response = await axios.put(`${process.env.REACT_APP_API_URL}/order/${id}`,
+    {
+      name, address, city, state, code, mob, email, pass
+    })
+    toast.success(response.data.message);
+    loadItem();
+    setActiveComponent("profile");
+  }
+
+  const cancelOrder = async() => {
+    const response = await axios.put(`${process.env.REACT_APP_API_URL}/order/${id}`,
+    {
+      url: " ",
+      title: " ",
+      content: " ",
+      price: " ",
+      payment: " ",
+      type: " "
+    })
+    toast.success("Order delete successfully");
+    login();
+    loadItem();
+  }
 
   useEffect(()=>{
     loadItem();
   }, []);
-
-  const addItem = async() => {
-    // const response = await axios.post(`${process.env.REACT_APP_API_URL}/order`,
-    // {
-    //   url: url,
-    //   title: title,
-    //   content: content,
-    //   price: price
-    // })
-    // toast.success(response.data.message)
-    // reset()
-    // loadItems();
-  }
-
-  const reset = () => {
-    // setUrl('')
-    // setTitle('')
-    // setContent('')
-    // setPrice('')
-  }
 
 
   const handleSetActiveComponent = (component) => {
@@ -130,21 +167,21 @@ function UserDashboard() {
                     <div className="container">
                       <div className="row">
                         <div className="col-4 border-end border-dark">
-                            <img src={`https://i.pravatar.cc/`} className="col-6 m-4 imd-pro d-block mx-auto rounded-circle border border-dark"/>
-                            <p className="fs-1 text-center">{userData.name}</p>
+                            <img src={`https://i.pravatar.cc/?img=${mob.substring(0,2)}`} className="col-6 m-4 imd-pro d-block mx-auto rounded-circle border border-dark"/>
+                            <p className="fs-1 text-center">{name}</p>
                         </div>
                         <div className="col-8">
                           <div className="row">
                             <h5 className="my-3">Contact Details</h5>
-                              <p className="my-1 mx-3"><span className="fw-semibold">Email: </span>{userData.email}</p>
-                              <p className="my-1 mx-3"><span className="fw-semibold">Mob No.: </span>{userData.mob}</p>
+                              <p className="my-1 mx-3"><span className="fw-semibold">Email: </span>{email}</p>
+                              <p className="my-1 mx-3"><span className="fw-semibold">Mob No.: </span>{mob}</p>
                               <p className="my-1 mx-3"><span className="fw-semibold">Password: </span>********</p>
                           </div><hr />
                           <div className="row">
                             <h5 className="my-3">Address Details</h5>
-                            <p className="my-1 mx-3"><span className="fw-semibold">Address: </span>{userData.address}</p>
-                            <p className="my-1 mx-3"><span className="fw-semibold">City: </span>{userData.city}</p>
-                            <p className="my-1 mx-3"><span className="fw-semibold">State: </span>{userData.state}-{userData.code}</p>
+                            <p className="my-1 mx-3"><span className="fw-semibold">Address: </span>{address}</p>
+                            <p className="my-1 mx-3"><span className="fw-semibold">City: </span>{city}</p>
+                            <p className="my-1 mx-3"><span className="fw-semibold">State: </span>{state}-{code}</p>
                           </div>
                         </div>
                       </div>
@@ -158,35 +195,116 @@ function UserDashboard() {
                     <div class="card m-3">
                       <div class="row g-0">
                         <div class="col-md-3">
-                          <img src={userData.url} class="img-fluid rounded-start" alt="..." />
+                          <img src={url} class="img-fluid rounded-start" alt="..." />
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">{userData.title}</h5>
-                            <p class="card-text">{userData.content}</p>
-                            <p class="card-text"><small class="text-body-secondary fs-5">Rs. {userData.price}</small></p>
-                            <p class="card-text">Type of product: <b>{userData.type}</b></p>
-                            <p class="card-text fw-light">Payment mode: Cash on delivery</p>
+                            <h5 class="card-title">{title}</h5>
+                            <p class="card-text">{content}</p>
+                            <p class="card-text"><small class="text-body-secondary fs-5">Rs. {price}</small></p>
+                            <p class="card-text">Type of product: <b>{type}</b></p>
+                            <p class="card-text fw-light">Payment mode: {payment}</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                      {/* <img src={userData.url} />
-                      <h2>{userData.title}</h2>
-                      <h4>{userData.content}</h4>
-                      <h5>{userData.price}</h5>
-                      <p>Payment: {userData.payment}</p>
-                      <p>Type: {userData.type}</p> */}
+                    <button type='button' onClick={cancelOrder} className="mt-3 py-2 rounded border bag-c d-block mx-auto">Cancel Order</button>
                     </div>
                   </div>
                 )}
                 {activeComponent === "editProfile" && (
                   <div>
-                    <h1 className="text-center pt-2">Edit Profile</h1><hr />
-                    <div className="container d-flex flex-wrap justify-content-between">
-                    
+                  <h1 className="text-center pt-2 pt-2">Edit Profile</h1><hr />
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-4 border-end border-dark">
+                          <img src={`https://i.pravatar.cc/?img=${mob.substring(0,2)}`} className="col-6 m-4 imd-pro d-block mx-auto rounded-circle border border-dark"/>
+                          <p className="fs-5 text-center">
+                            <span className="mb-2">Name : </span>
+                            <input type='text'
+                              placeholder='Enter name'
+                              value={name}
+                              onChange={(e)=>{
+                                setName(e.target.value)
+                              }} 
+                              className='mb-4 p-2 px-3 rounded border border-black'/>
+                              <button type='button' onClick={updateData} className="fs-6 mt-3 py-2 rounded border bag">Update</button>
+                            </p>
+                            
+                      </div>
+                      <div className="col-8">
+                        <div className="row">
+                          <h5 className="my-3">Contact Details</h5>
+                            <p className="my-1 mx-3"><span className="fw-semibold">Email: </span>
+                              <input type='text'
+                                placeholder='Enter email'
+                                value={email}
+                                onChange={(e)=>{
+                                  setEmail(e.target.value)
+                                }} 
+                                className='px-3 rounded border border-black'/>
+                              </p>
+                            <p className="my-1 mx-3"><span className="fw-semibold">Mob No.: </span> <input type='text'
+                                  placeholder='Enter Mob'
+                                  value={mob}
+                                  onChange={(e)=>{
+                                    setMob(e.target.value)
+                                  }} 
+                                  className='px-3 rounded border border-black'/>
+                            </p>
+                            <p className="my-1 mx-3"><span className="fw-semibold">Password: </span>
+                              <input type='text'
+                                  placeholder='Enter Password'
+                                  value={pass}
+                                  onChange={(e)=>{
+                                    setPass(e.target.value)
+                                  }} 
+                                  className='px-3 rounded border border-black'/>
+                            </p>
+                        </div><hr />
+                        <div className="row">
+                          <h5 className="my-3">Address Details</h5>
+                          <p className="my-1 mx-3"><span className="fw-semibold">Address: </span>
+                            <input type='text'
+                              placeholder='Enter address'
+                              value={address}
+                              onChange={(e)=>{
+                                setAddress(e.target.value)
+                              }} 
+                              className='w-75 px-3 rounded border border-black'/>
+                          </p>
+                          <p className="my-1 mx-3"><span className="fw-semibold">City: </span>
+                            <input type='text'
+                              placeholder='Enter city'
+                              value={city}
+                              onChange={(e)=>{
+                                setCity(e.target.value)
+                              }} 
+                              className='px-3 rounded border border-black'/>
+                          </p>
+                          <p className="my-1 mx-3"><span className="fw-semibold">State: </span>
+                            <input type='text'
+                              placeholder='Enter state'
+                              value={state}
+                              onChange={(e)=>{
+                                setState(e.target.value)
+                              }} 
+                              className='px-3 rounded border border-black'/>
+                          </p>
+                          <p className="my-1 mx-3"><span className="fw-semibold">Pin code: </span>
+                            <input type='text'
+                              placeholder='Enter code'
+                              value={code}
+                              onChange={(e)=>{
+                                setCode(e.target.value)
+                              }} 
+                              className='px-3 rounded border border-black'/>
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                </div>
                 )}
               </div>
             </div>

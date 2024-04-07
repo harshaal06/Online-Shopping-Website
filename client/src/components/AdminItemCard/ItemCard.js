@@ -30,7 +30,7 @@ function NoteCard({_id, url, title, content, price, loadItems, type}) {
                     alt='delete-icon'
                     onClick={deleteItem}
                 />
-                <Link to={`/update/${_id}`} >
+                <Link to={`/admin-update-details/${type}/${_id}`} >
                 <img src={UpdateIcon} 
                     className='bg-primary-subtle position-absolute update-icon shadow-sm border border-dark-subtle p-2 rounded-circle'
                     alt='delete-icon'
