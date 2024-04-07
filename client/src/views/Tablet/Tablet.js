@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Tablet.css'; 
+import axios from 'axios'
 import TabletCard from '../../components/TabletCard/TabletCard';
 import Navbar from '../../components/Navbar/Navbar';
-
+import Footer from '../../components/Footer/Footer';
 
 
 const tabletsData = [
@@ -11,21 +12,21 @@ const tabletsData = [
     name: 'Galaxy Tab A9 (Wi-Fi, 4GB RAM)',
     content: '22.05cm (8.7”) LCD display, 60 Hz Refresh Rate, 800 x 1340 (WQXGA),MediaTek Helio | G99 Processor',
     price:  129999.00 ,
-    imageUrl: 'https://images.samsung.com/is/image/samsung/p6pim/in/sm-x516bzaeinu/gallery/in-galaxy-tab-s9-fe-sm-x516-481713-sm-x516bzaeinu-thumb-538591264?$152_152_PNG$',
+    url: 'https://images.samsung.com/is/image/samsung/p6pim/in/sm-x516bzaeinu/gallery/in-galaxy-tab-s9-fe-sm-x516-481713-sm-x516bzaeinu-thumb-538591264?$152_152_PNG$',
   },
   {
     id: 2,
     name: 'Galaxy Tab A9+ (5G, 4GB RAM)',
     content: 'Engaging viewing experience with large 27.82cm (11.0") LCD display, 90 Hz Refresh Rate, 1920 x 1200 ',
     price: 22999.00,
-    imageUrl: 'https://images.samsung.com/is/image/samsung/p6pim/in/sm-x710nzaainu/gallery/in-galaxy-tab-s9-wifi-x710-sm-x710nzaainu-thumb-537885436?$152_152_PNG$',
+    url: 'https://images.samsung.com/is/image/samsung/p6pim/in/sm-x710nzaainu/gallery/in-galaxy-tab-s9-wifi-x710-sm-x710nzaainu-thumb-537885436?$152_152_PNG$',
   },
   {
     id: 3,
     name: 'Galaxy Tab A9 (Wi-Fi, 4GB RAM)',
     content: '22.05cm (8.7”) LCD display, 60 Hz Refresh Rate, 800 x 1340 (WQXGA),MediaTek Helio | G99 Processor',
     price:  199999.00 ,
-    imageUrl: 'https://images.samsung.com/is/image/samsung/p6pim/in/sm-x516blgainu/gallery/in-galaxy-tab-s9-fe-sm-x516-sm-x516blgainu-thumb-538479395?$152_152_PNG$',
+    url: 'https://images.samsung.com/is/image/samsung/p6pim/in/sm-x516blgainu/gallery/in-galaxy-tab-s9-fe-sm-x516-sm-x516blgainu-thumb-538479395?$152_152_PNG$',
   },
 
 
@@ -54,6 +55,20 @@ const tabletsData = [
 ];
 
 function Tablet() {
+
+  const [tabletList,setTabletList] = useState([]);
+
+  const loadList = async ()=>{
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/tablet`);
+      console.log(response.data.data);
+     setTabletList(response.data.data);
+     
+  }
+  useEffect(()=>{
+    loadList(); 
+},[])
+
+
   return (
     <div className="tablet-container">
       <Navbar />
@@ -65,6 +80,9 @@ function Tablet() {
           <TabletCard key={tablet.id} tablet={tablet} />
         ))}
       </div>
+
+      <Footer/>
+
     </div>
   );
 }
