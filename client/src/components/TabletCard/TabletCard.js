@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 const TabletCard = ({ _id,url,title,content,price }) => {
   
   return (
-    <div className="tablet-card">
-      <img src={url} alt={title} />
+    <div className="tablet-card card">
+      <img src={url} alt={title} className='img-wth'/>
       <div className="tablet-details">
         <h2>{title}</h2>
         <p> {content}</p>
