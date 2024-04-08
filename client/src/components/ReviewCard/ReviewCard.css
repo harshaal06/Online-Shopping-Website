@@ -9,3 +9,42 @@
     top: -40px;
     left: 135px;
 }
+.review{
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  .head3{
+    text-align: center;
+    font-size: 25px;
+    margin: 20px;
+
+    
+    
+
+  }
+  .items3{
+    width: 250px;
+    border: 2px solid;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px blanchedalmond;
+    background-color: #fff;
+  }
+  .review-img{
+    width: 100px;
+    display: block;
+    margin: 0px auto;
+    margin-top: 30px;
+  }
+  .Star-img{
+    width: 100px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+  }
+  .para5{
+    font-size:11px;
+    text-align: center;
+    font-weight: bold;
+  }
