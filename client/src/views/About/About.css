@@ -1,39 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-body{
-     Background: #eef3f7;
+.bag-btn{
+  background-color: #fb5f04;
+  border: 1px solid #fb5f04;
 }
-.name {
-    text-align:center;
-    font-size: 60px;
-    
-    }
-.paragraph{
-  font-size: 20px;
-  background-color: #e7ecf1;
-}
-.imges{
-    height: 20px;
-}    
-.about-img{
-  height: 350px;
-  margin: 0 auto;
-  border: 1px solid black;
-}
-.about-con{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.about-card{
-  padding: 20px;
-  width: 700px;
-  height: 400px;
- 
-}
-.about-title{
-  font-size:23px;
-  padding: 20px;
-  font-weight: 500;
-}
-
-

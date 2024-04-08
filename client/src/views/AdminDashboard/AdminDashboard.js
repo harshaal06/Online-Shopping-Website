@@ -89,8 +89,8 @@ function AdminDashboard() {
                   <div className="container">
                     {
                       orders.map((order) => {
-                        const { _id, url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type } = order;
-                        return (<OrderCard key={_id} _id={_id} url={url} title={title} content={content} price={price} name={name} address={address} city={city} state={state} code={code} mob={mob} email={email} pass={pass} payment={payment} type={type} loadItems={loadItems} />)
+                        const { _id, url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type } = order;
+                        return (<OrderCard key={_id} _id={_id} url={url} title={title} content={content} price={price} name={name} imgurl={imgurl} address={address} city={city} state={state} code={code} mob={mob} email={email} pass={pass} payment={payment} type={type} loadItems={loadItems} />)
                       })
                     }
                   </div>
