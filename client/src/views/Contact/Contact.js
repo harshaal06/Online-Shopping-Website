@@ -1,10 +1,34 @@
-import React from 'react'
 import "./Contact.css"
-import email from "../../views/Contact/email.png"
+import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast';
+import axios from 'axios';
+import Email from "../../views/Contact/email.png"
 import phone from "../../views/Contact/phone.png"
 import location from "../../views/Contact/location.png"
 import shape from "../../views/Contact/shape.png"
+import Navbar from '../../components/Navbar/Navbar'
+
+
 export default function Contact() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const addContact = async() => {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/contact`,
+    {
+      name, email, message
+    })
+    toast.success(response.data.message)
+    reset()
+  }
+
+  const reset = () => {
+    setEmail('');
+    setMessage('');
+    setName('');
+  }
     
     
     const inputs = document.querySelectorAll(".input");
@@ -27,6 +51,7 @@ export default function Contact() {
     });
   return (
     <div>
+      <Navbar/>
       <div className="container22">
       <span className="big-circle"></span>
       <img src={shape} className="square" alt="" />
@@ -43,7 +68,7 @@ export default function Contact() {
               <p>Rahuri Tal-Rahuri, Dist-A.nagar,State-Maharashtra 413705</p>
             </div>
             <div className="information22">
-              <img src={email} className="icon22" alt="surajhapse1@gmail.com" />
+              <img src={Email} className="icon22" alt="surajhapse1@gmail.com" />
               <p>ganeshwagh580@gmail.com</p>
             </div>
             <div className="information22">
@@ -78,26 +103,38 @@ export default function Contact() {
           <form action="index.html" className="contact-us-form" autoComplete="off">
             <h3 className="title22">Contact us</h3>
             <div className="input-container">
-              <input type="text" name="name" className="input" />
-              <label htmlFor="">Username</label>
+              <input type="text" name="name" placeholder='Username'
+              value={name}
+              onChange={(e)=>{
+                setName(e.target.value)
+              }}
+              className="input" />
+              
               <span>Username</span>
             </div>
             <div className="input-container">
-              <input type="email" name="email" className="input" />
-              <label htmlFor="">Email</label>
+              <input type="email" name="email" placeholder='Email'
+              value={email}
+              onChange={(e)=>{
+                setEmail(e.target.value)
+              }}
+              className="input" />
               <span>Email</span>
             </div>
-            <div className="input-container">
-              <input type="tel" name="phone" className="input" />
-              <label htmlFor="">Phone</label>
-              <span>Phone</span>
-            </div>
             <div className="input-container textarea">
-              <textarea name="message" className="input"></textarea>
-              <label htmlFor="">Message</label>
+              <textarea name="message" placeholder='Message'
+              value={message}
+              onChange={(e)=>{
+                setMessage(e.target.value)
+              }}
+              className="input"></textarea>
+              
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" className="btn22" />
+            <div className="text-center mt-4">
+              <button type="button"
+              onClick={addContact} className="px-5 py-2 rounded bag-btn">Send</button>
+            </div>
           </form>
         </div>
       </div>
