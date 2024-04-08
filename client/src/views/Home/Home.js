@@ -47,7 +47,7 @@ function App() {
       </div>
       <div className='items2'>
       <img src={Laptop} className='iphone-img1'/>
-      <p style={{ textAlign:"center",marginTop:"35x" }} >Laptop</p>
+      <p style={{ textAlign:"center",marginTop:"35px" }} >Laptops</p>
       </div>
       <div className='items2'>
       <img src={Buds} className='iphone-img'/>
