@@ -10,6 +10,7 @@ import Tablet from "./models/Tablet.js";
 import Contact from "./models/Contact.js";
 import Review from "./models/Review.js";
 import Order from "./models/Order.js";
+import Admin from "./models/Admin.js";
 
 const app = express();
 app.use(cors());
@@ -439,6 +440,18 @@ app.delete("/review/:id", async(req, res)=>{
         success: true,
         message: "Review deleted successfully",
         data: null
+    })
+})
+
+//ADMIN
+app.get("/admin",async(req, res)=>{
+
+    const admin = await Admin.find();
+
+    res.json({
+        success: true,
+        message: "Admin featched successfully",
+        data: admin
     })
 })
 
