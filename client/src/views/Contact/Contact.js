@@ -27,6 +27,7 @@ export default function Contact() {
     });
   return (
     <div>
+      <Navbar/>
       <div className="container22">
       <span className="big-circle"></span>
       <img src={shape} className="square" alt="" />
