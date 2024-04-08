@@ -1,17 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-body{
-     Background: #eef3f7;
+.bag-btn{
+  background-color: #fb5f04;
+  border: 1px solid #fb5f04;
 }
-.name {
-    text-align:center;
-    font-size: 60px;
-    width: 720px;
-    }
-.paragraph{
-  font-size: 20px;
-  background-color: #e7ecf1;
+.box-review{
+  overflow-x: scroll;
 }
-.imges{
-    height: 20px;
-}    
-

@@ -6,6 +6,7 @@ const orderSchema = new Schema({
     content: String,
     price: Number,
     name: String,
+    imgurl: String,
     address: String,
     city: String,
     state: String,

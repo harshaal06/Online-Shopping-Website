@@ -5,7 +5,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 30px;
+        margin: 0 30px;
 }
 body{
     background-color:  #eef3f7 
@@ -16,4 +16,29 @@ body{
     width: 100%;
     display: block;
     margin: 0 auto;
+}
+.hading-1{
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+ @media screen and (max-width: 450px){
+    .hading-1{
+        font-size: 15px;
+    }
+    .Card-container{
+        justify-content: space-evenly;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 800px) {
+    .hading-1{
+        font-size: 17px;
+    }
+    .Card-container{
+        justify-content: space-between;
+    }
 }

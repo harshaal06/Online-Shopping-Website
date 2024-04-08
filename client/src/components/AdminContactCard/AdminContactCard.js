@@ -14,7 +14,7 @@ function AdminContactCard({_id, name, email, message, loadItems, type, msg}) {
   }
 
   return (
-    <div className="border card border-dark bg-body-secondary shadow-sm rounded py-2 px-3 mb-3 card-with position-relative" >
+    <div className="border card border-dark card shadow shadow-sm rounded py-2 px-3 mb-3 card-with position-relative" >
         <p className="fs-5 m-1"><b>Name:</b> {name}</p>
         {email && (
           <p className="m-1"><b>Email:</b> <a href="mailto:pranalidevtarse@gmail.com">{email}</a></p>)}

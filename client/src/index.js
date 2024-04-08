@@ -10,7 +10,8 @@ import Tablet from './views/Tablet/Tablet';
 import Contact from './views/Contact/Contact';
 import About from './views/About/About';
 import OrderNow from './views/OrderNow/OrderNow';
-import Login from './views/Login/Login';
+import AdminOrderNow from './views/AdminOrderNow/AdminOrderNow';
+import Register from './views/Register/Register';
 import UserDashboard from './views/UserDashboard/UserDashboard';
 import AdminDashboard from './views/AdminDashboard/AdminDashboard';
 import AdminUpdateDetails from './views/AdminDashboard/AdminUpdateDetails';
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
     element: <Contact />
   },
   {
-    path: "/OrderNow",
+    path: "/Order-now",
     element: <OrderNow />
   },
   {
@@ -63,6 +64,14 @@ const router = createBrowserRouter([
   {
     path: "/admin-dashboard",
     element: <AdminDashboard />
+  },
+  {
+    path: "/ordernow/:type/:id",
+    element: <AdminOrderNow />
+  },
+  {
+    path: "/register",
+    element: <Register />
   },
   {
     path: "/admin-update-details/:type/:id",

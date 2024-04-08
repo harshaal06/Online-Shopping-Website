@@ -9,10 +9,11 @@ const TabletCard = ({ _id,url,title,content,price }) => {
       <img src={url} alt={title} className='img-wth'/>
       <div className="tablet-details">
         <h2>{title}</h2>
-        <p>{content.substring(0,50)}. . .<Link to={`/tablet-blog/${_id}`} className='text-decoration-none'>Read more</Link></p>
+        <p>{content.substring(0,130)}. . .<Link to={`/tablet-blog/${_id}`} className='text-decoration-none'>Read more</Link></p>
         
         
         <h4 className='mt-3'>Price: ₹ {price}</h4>
+        <Link to={`/ordernow/tablet/${_id}`}><button className='order-btn'>order now</button></Link>
       </div>
     </div>
   );

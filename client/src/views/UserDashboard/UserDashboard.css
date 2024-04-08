@@ -24,3 +24,12 @@
     height: 280px;
     width: 280px;
 }
+.icon-ht{
+    height: 40px;
+    cursor: pointer;
+}
+ @media screen and (max-width: 600px){
+    .menu-box-user{
+        height: auto;
+    }
+}

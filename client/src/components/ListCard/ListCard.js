@@ -4,19 +4,17 @@ import { Link } from 'react-router-dom'
 
 
 
-function ListCard({_id,url,title,content,price}) {
+function ListCard({ _id, url, title, content, price }) {
   return (
-    <div className='card-container'>
-        <div className='list-card'>
+      <div className='list-card'>
 
-        <img src={url} alt='laptopimg' className='list-img'/>
+        <img src={url} alt='laptopimg' className='list-img' />
         <h1 className='list-title'>{title}</h1>
-        <p className='list-content'>{content.substring(0,140)} {title.length > 20 ? "..." : <Link to={`/laptop-blog/${_id}`}>Read More</Link>}</p>
-        
+        <p className='list-content'>{content.substring(0, 130)} {title.length > 20 ? "..." : <Link to={`/laptop-blog/${_id}`}>Read More</Link>}</p>
+
         <h2 className='list-price'>₹ {price}</h2>
 
-        </div>
-    </div>
+      </div>
   )
 }
 

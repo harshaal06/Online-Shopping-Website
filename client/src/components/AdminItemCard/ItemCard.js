@@ -15,13 +15,13 @@ function NoteCard({_id, url, title, content, price, loadItems, type}) {
   }
 
   return (
-    <div className="border border-dark rounded mb-3 card-with position-relative" >
+    <div className="card shadow border border-dark rounded mb-3 card-with position-relative" >
         <div className="row g-0">
             <div className="col-md-4">
             <img src={url} className="img-fluid rounded-start p-3" />
             </div>
             <div className="col-md-8">
-            <div className="card-body">
+            <div className="card-body text-center text-md-start">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{content}</p>
                 <p className="card-text"><small className="text-body-secondary">Rs. {price}</small></p>

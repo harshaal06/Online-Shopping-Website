@@ -10,9 +10,9 @@
   }
   .items{
     width: 500px;
-    
-    
+    margin: 50px;
   }
+
   .para{
     height:20px;
     font-size: 30px;
@@ -38,7 +38,7 @@
   .img{
     width: 500px;
     height: auto;
-   margin-top: 80px;
+    margin-top: 80px;
   }
   .head2{
     text-align: center;
@@ -57,13 +57,25 @@
     
   
   }
-  .items2{
-    width: 205px;
+
+
+  .items2 {
+    width: 250px; 
     height: 300px;
-    border:2px solid;
-    border-radius: 10px ;
-    margin-top: 10px;
-  }
+    border: 2px solid #ccc; 
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    margin-top: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+}
+
+.items2:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
   .iphone-img{
     width: 200px;
     
@@ -90,6 +102,7 @@
   .head3{
     text-align: center;
     font-size: 25px;
+    margin: 20px;
 
     
     
@@ -150,11 +163,11 @@
   .Faq-section{
     background-color: #eef3f7;
     margin-bottom: 20px;
-   
-     
-     
+
    }
   
   
   
+  
+
   
