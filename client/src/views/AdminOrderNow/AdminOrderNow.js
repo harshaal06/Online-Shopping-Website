@@ -29,7 +29,7 @@ function AdminOrderNow() {
   const loadItem = async (id) => {
     if(!id) return
 
-    const response = await axios.get(${process.env.REACT_APP_API_URL}/${type}/${id})
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/${type}/${id}`)
 
     setUrl(response.data.data.url)
     setTitle(response.data.data.title)
@@ -42,7 +42,7 @@ function AdminOrderNow() {
   }, [id])
 
   const addOrder = async() => {
-    const response = await axios.post(${process.env.REACT_APP_API_URL}/order,
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/order`,
     { url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type })
     toast.success(response.data.message);
     reset()
