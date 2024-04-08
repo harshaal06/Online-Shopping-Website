@@ -20,18 +20,19 @@ function Footer() {
           <div class="col-md-2 col-sm-12 mt-4 text-center text-md-start">
             <p class="fs-5 m-0">Quick Links</p>
             <ul>
-              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">About us</li></Link>
-              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Contact us</li></Link>
-              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Review</li></Link>
-              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Login</li></Link>
+              <Link to="/about" class="text-decoration-none text-light"><li class="list-group-item m-2">About us</li></Link>
+              <Link to="/contact" class="text-decoration-none text-light"><li class="list-group-item m-2">Contact us</li></Link>
+              <Link to="/about" class="text-decoration-none text-light"><li class="list-group-item m-2">Review</li></Link>
+              <Link to="/order-now" class="text-decoration-none text-light"><li class="list-group-item m-2">Order Now</li></Link>
+              <Link to="/check-order" class="text-decoration-none text-light"><li class="list-group-item m-2">Login</li></Link>
             </ul>
           </div>
           <div class="col-md-2 col-sm-12 mt-4 text-center text-md-start">
             <p class="fs-5 m-0">Products</p>
             <ul>
-              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Laptops</li></Link>
-              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Tablets</li></Link>
-              <Link to="/" class="text-decoration-none text-light"><li class="list-group-item m-2">Mobiles</li></Link>
+              <Link to="/laptop" class="text-decoration-none text-light"><li class="list-group-item m-2">Laptops</li></Link>
+              <Link to="/tablet" class="text-decoration-none text-light"><li class="list-group-item m-2">Tablets</li></Link>
+              <Link to="/mobile" class="text-decoration-none text-light"><li class="list-group-item m-2">Mobiles</li></Link>
             </ul>
           </div>
           <div class="col-md-4 col-sm-12 mt-4 text-center text-md-start">

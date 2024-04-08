@@ -1,5 +1,6 @@
 import "./About.css"
-import Navbar from '../../components/Navbar/Navbar'
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from "../../components/Footer/Footer";
 import React, { useEffect, useState } from 'react'
 import AboutImg from './about.img.png'
 import toast from 'react-hot-toast';
@@ -98,6 +99,7 @@ function About() {
           </div>
         </div>
       </div>
+      <Footer />
 
     </div>
   )

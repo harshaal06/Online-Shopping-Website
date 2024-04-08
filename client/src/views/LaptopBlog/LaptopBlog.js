@@ -5,9 +5,6 @@ import {Link, useParams} from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
-
-
-
 function LaptopBlog()
  {
   const [title,setTitile] = useState('');
@@ -43,7 +40,7 @@ function LaptopBlog()
         <p className='list-content-1'> {content}</p> 
         <h2 className='list-price-1'>₹ {price}</h2>
 
-        <button type='button' className='order-btn-1'><Link className='likn' to={`/Order-now`}>Order Now</Link></button>
+        <Link to={`/ordernow/laptop/${id}`} className='likn'><button type='button' className='order-btn-1'>Order Now</button></Link>
         
 
 

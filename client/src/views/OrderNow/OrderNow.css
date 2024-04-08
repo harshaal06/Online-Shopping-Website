@@ -1,0 +1,30 @@
+.btn-bg{
+    background-color: #fb5f04;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+
+body{
+    background: #eef3f7;
+    font-family: 'Poppins', sans-serif;
+}
+.bag{
+    background-color: #fb5f04;
+}
+.bod{
+    border: 1px solid #fb5f04;
+}
+.wdt{
+    width: 50px;
+    height: 50px;
+}
+.c-bag{
+    background-color: rgba(198, 196, 196, 0.213);
+}
+.r-bag{
+    background-color: #eef3f7;
+}
+.ha{
+    color: #fb5f04;
+}
