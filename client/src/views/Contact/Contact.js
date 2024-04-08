@@ -97,7 +97,6 @@ export default function Contact() {
               <label htmlFor="">Message</label>
               <span>Message</span>
             </div>
-            
           </form>
         </div>
       </div>
