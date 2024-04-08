@@ -15,7 +15,7 @@ function NoteCard({_id, url, title, content, price, loadItems, type}) {
   }
 
   return (
-    <div className="border border-dark rounded mb-3 card-with position-relative" >
+    <div className="card shadow border border-dark rounded mb-3 card-with position-relative" >
         <div className="row g-0">
             <div className="col-md-4">
             <img src={url} className="img-fluid rounded-start p-3" />

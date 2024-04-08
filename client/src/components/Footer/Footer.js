@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Facebook from './facebook.png'
 import Instagram from './instagram.png'
 import Linkedin from './linkedin.png'
-import Twitter from './Twitter.png'
+import Twitter from './twitter.png'
 import Gadgets from './gadgets.png'
 
 function Footer() {

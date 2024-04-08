@@ -15,10 +15,10 @@ function UserDashboard() {
   const [loginPass, setLoginPass] = useState('');
   const [activeComponent, setActiveComponent] = useState("profile");
   const [orders, setOrders] = useState([]);
-  const [userData, setUserData] = useState([]);
 
   const [id, setId] = useState('');
   const [name, setName] = useState('');
+  const [imgurl, setImgurl] = useState('');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
@@ -49,7 +49,7 @@ function UserDashboard() {
     }
     else{
       orders.map((order) => {
-        const {_id, url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type} = order;
+        const {_id, url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type} = order;
         if(loginEmail===email){
           if(loginPass!==pass){
             toast.error("Incorrect password ");
@@ -57,10 +57,10 @@ function UserDashboard() {
           }
           else if(loginPass===pass){
             toast.success("Successfully Login");
-            setUserData(order);
             setActiveTab("main");
             setId(_id);
             setName(name);
+            setImgurl(imgurl);
             setAddress(address);
             setCity(city);
             setState(state);
@@ -154,7 +154,7 @@ function UserDashboard() {
     )}
     {activeTab === "main" && (
     <div>
-        <h1 className="text-center p-3 bg-dark text-white">Hello 👋 {userData.name}</h1>
+        <h1 className="text-center p-3 bg-dark text-white">Hello 👋 {name}</h1>
         <div className="m-3 mx-4">
           <div className='row'>
             <div className="container d-block d-md-none col-12 rounded-4 bg-dark text-white mb-3">
@@ -185,7 +185,7 @@ function UserDashboard() {
                     <div className="container">
                       <div className="row mb-4">
                         <div className="col-12 col-md-4 border-end border-dark">
-                            <img src={`https://i.pravatar.cc/?img=${mob.substring(0,2)}`} className="col-6 m-4 imd-pro d-block mx-auto rounded-circle border border-dark"/>
+                            <img src={imgurl} className="col-6 m-4 imd-pro d-block mx-auto rounded-circle border border-dark"/>
                             <p className="fs-1 text-center">{name}</p>
                         </div>
                         <div className="col-12 col-md-8 text-center text-md-start">
@@ -236,7 +236,16 @@ function UserDashboard() {
                   <div className="container">
                     <div className="row">
                       <div className="col-12 col-md-4 border-end border-dark">
-                          <img src={`https://i.pravatar.cc/?img=${mob.substring(0,2)}`} className="col-6 m-4 imd-pro d-block mx-auto rounded-circle border border-dark"/>
+                          <img src={imgurl} className="col-6 m-4 imd-pro d-block mx-auto rounded-circle border border-dark"/>
+                          <p className="my-1 mx-3 text-center"><span className="fw-semibold">Img Url: </span>
+                            <input type='text'
+                              placeholder='Enter address'
+                              value={imgurl}
+                              onChange={(e)=>{
+                                setImgurl(e.target.value)
+                              }} 
+                              className='w-100 mb-3 px-3 rounded border border-black'/>
+                          </p>
                           <p className="fs-5 text-center">
                             <span className="mb-2">Name : </span>
                             <input type='text'
@@ -245,7 +254,7 @@ function UserDashboard() {
                               onChange={(e)=>{
                                 setName(e.target.value)
                               }} 
-                              className='mb-4 p-2 px-3 rounded border border-black'/>
+                              className='mb-1 p-2 px-3 rounded border border-black'/>
                               <button type='button' onClick={updateData} className="fs-6 mt-3 py-2 rounded border bag">Update</button>
                             </p>
                             

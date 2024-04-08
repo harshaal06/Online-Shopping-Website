@@ -13,7 +13,7 @@ const TabletCard = ({ _id,url,title,content,price }) => {
         
         
         <h4 className='mt-3'>Price: ₹ {price}</h4>
-        <button className='order-btn'>order now</button>
+        <Link to={`/ordernow/tablet/${_id}`}><button className='order-btn'>order now</button></Link>
       </div>
     </div>
   );

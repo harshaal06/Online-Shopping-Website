@@ -444,7 +444,7 @@ app.delete("/review/:id", async(req, res)=>{
 
 // ORDER
 app.post("/order",async(req, res)=>{
-    const {url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type} = req.body;
+    const {url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type} = req.body;
 
     if(!name){
         return res.json({
@@ -487,7 +487,7 @@ app.post("/order",async(req, res)=>{
     }
 
     const newOrder = await Order.create({
-        url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type
+        url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type
     })
 
     res.json({
@@ -509,10 +509,10 @@ app.get("/order",async(req, res)=>{
 app.put("/order/:id", async(req, res)=>{
     const {id} = req.params;
 
-    const {url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type} = req.body;
+    const {url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type} = req.body;
 
     await Order.updateOne({ _id: id }, {$set:{
-        url, title, content, price, name, address, city, state, code, mob, email, pass, payment, type
+        url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type
     }})
 
     res.json({
