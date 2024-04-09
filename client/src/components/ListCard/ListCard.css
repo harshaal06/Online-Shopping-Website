@@ -1,13 +1,11 @@
 
 .list-card{
     width: 400px;
-    height: 500px;
+    height: 520px;
     box-shadow: rgba(0, 0, 0, 0.40) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     padding: 20px;
-   margin-bottom: 100px;
    border-radius: 10px;
-   margin-top: 50px;
-   margin-left: 10px;
+   margin: 50px 0;
    background-color:  #ffffff 
    
 }
@@ -24,7 +22,7 @@
 text-align: center;
 font-weight: 800;
 font-size: 18px;
-margin-top: 30px;
+margin-top: 15px;
 
 }
 .list-content{
@@ -38,14 +36,42 @@ text-align: center;
 font-family: 25px;
 margin-top: 10px;
 }
+.order-btn {
+    background-color: #fb5f04;
+    border: none;
+    padding: 6px 14px;
+    margin-top: 15px;
+    border-radius: 4px;
+    display: block;
+    margin: 25px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order-btn:hover {
+    background-color: #fb5f04;
+    transform: scale(1.05);
+}
 @media screen and (max-width: 350px ){
     .list-img{
         height: 100px;
      }
      .list-card{
         width: 250px; 
-        height: 370px;
+        height: 440px;
     }
+    .order-btn {
+        background-color: #fb5f04;
+        border: none;
+        padding: 6px 14px;
+        margin-top: 15px;
+        border-radius: 4px;
+        display: block;
+        margin: 10px auto;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
     .list-title{
         text-align: center;
         font-weight: 800;
@@ -68,7 +94,7 @@ margin-top: 10px;
      }
      .list-card{
         width: 350px; 
-        height: 370px;
+        height: 390px;
         margin-bottom: 50px;
 
     }

@@ -68,7 +68,7 @@ body {
 @media screen and (max-width: 500px) {
     .tablet-card {
         width: 90%; 
-        height: 380px;
+        height: 400px;
         max-width: 300px;
     }
 
@@ -87,5 +87,10 @@ body {
 
     .tablet-details h4 {
         font-size: 14px;
+    }
+    .order-btn {
+        padding: 5px 12px;
+        border-radius: 4px;
+        font-size: 13px;
     }
 }

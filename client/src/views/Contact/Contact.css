@@ -37,13 +37,15 @@ textarea {
 }
 
 .contact-form {
-  background-color: #1abc9c;
+  /* background-color: #1abc9c; */
+  background-color: #ea9f73;
   position: relative;
 }
 
 .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #149279);
+  background: linear-gradient(135deg, transparent 20%, #e16218);
+  /* background: linear-gradient(135deg, transparent 20%, #149279); */
   position: absolute;
 }
 
@@ -66,7 +68,8 @@ textarea {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #1abc9c;
+  background-color: #ea9f73;
+  /* background-color: #1abc9c; */
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -172,7 +175,8 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #1abc9c;
+  background-color: #ea9f73;
+  /* background-color: #1abc9c; */
   top: 50%;
   transform: translateY(-50%);
 }
@@ -204,7 +208,8 @@ textarea.input {
 }
 
 .contact-info .title {
-  color: #1abc9c;
+  /* color: #1abc9c; */
+  color: #fb5f04;
 }
 
 .text {
@@ -242,7 +247,8 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(45deg, #1abc9c, #149279);
+  /* background: linear-gradient(45deg, #1abc9c, #149279); */
+  background: linear-gradient(45deg, #ea9f73, #e16218);
   color: #fff;
   text-align: center;
   line-height: 35px;
@@ -271,7 +277,8 @@ textarea.input {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: linear-gradient(to bottom, #1cd4af, #159b80);
+  /* background: linear-gradient(to bottom, #1cd4af, #159b80); */
+  background: linear-gradient(to bottom, #ea9f73, #e16218);
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
