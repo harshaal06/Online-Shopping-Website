@@ -18,9 +18,15 @@ function App() {
     <div>
       <Navbar />
 
+
+     <div className='container1'> 
+      <div className='items'>
+        
+        <p className='para'>Our Best Collection For You</p>
       <div className='container1'>
         <div className='items'>
           <p className='para'>Our Best Collection For You</p>
+ 
 
           <h2 className='heading'>Laptop Watch Series</h2>
 
@@ -34,6 +40,7 @@ function App() {
 
           <img src={Image} className='img' />
         </div>
+      </div>
       </div>
 
       <div className='Container2'>
@@ -125,7 +132,7 @@ function App() {
       <Footer />
     </div>
 
-
+</div>
 
 
 
