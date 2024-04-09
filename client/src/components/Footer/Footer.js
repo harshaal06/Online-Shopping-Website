@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 import Facebook from './facebook.png'
 import Instagram from './instagram.png'
 import Linkedin from './linkedin.png'
-import Twitter from './twitter.png'
+import Twitter from './tw.png'
 import Gadgets from './gadgets.png'
 
 function Footer() {
   return (
-    <div className='bg-dark mt-5'>
+    <div className='bg-dark'>
     <div className='container'>
         <div class="row d-flex justify-content-around text-light py-3 pb-0">
           <div class="col-md-4 col-sm-12 mt-4 text-center">

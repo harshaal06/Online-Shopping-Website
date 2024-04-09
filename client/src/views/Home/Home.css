@@ -1,7 +1,14 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
+} */
+.img-whh{
+  width: 250px;
 }
+
+
+
+
 .container1{
     display: flex;
     justify-content: space-evenly;
@@ -31,9 +38,8 @@
   .btn{
     background-color: #fb5f04;
     border-radius: 10px;
+    color: black;
     padding: 5px 30px;
-    margin-left: 50px;
-    margin-bottom: 10px;
   }
   .img{
     width: 500px;

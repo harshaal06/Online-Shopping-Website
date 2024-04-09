@@ -5,3 +5,21 @@
 .box-review{
   overflow-x: scroll;
 }
+.size{
+  font-size: 45px;
+}
+.wh{
+  cursor: pointer;
+  width: auto;
+  transition: 0.5s;
+}
+.wh:hover{
+  transform: translateY(-10px);
+}
+.img-wh{
+  width: 180px;
+  height: 180px;
+}
+.color{
+  color: #fb5f04;
+}

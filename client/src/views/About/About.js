@@ -6,6 +6,9 @@ import AboutImg from './about.img.png'
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import ReviewCard from './../../components/ReviewCard/ReviewCard';
+import Harshal from './Harshal.jpg';
+import Nikhil from './Nikhil.jpg';
+import Shubham from './Shubham.jpg';
 
 function About() {
 
@@ -97,6 +100,65 @@ function About() {
             })
           }
           </div>
+        </div>
+      </div>
+      <div className="py-5 my-4">
+        <div className="container">
+          <div className="text-center pb-3 fs-3">
+            <h1 className="d-inline fw-semibold">MEET </h1><p className="d-inline">the</p> <h1 className="d-inline fw-semibold">TEAM</h1><hr />
+          </div>
+          <div className="d-flex justify-content-evenly flex-wrap px-5">
+            <div className="wh text-center p-3">
+              <img src={Harshal} className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Harshal Aglawe</p>
+              <p className="m-0 p-0 color">Member</p>
+            </div>
+            <div className="wh text-center p-3">
+              <img src={Nikhil} className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Nikhil Gadakh</p>
+              <p className="m-0 p-0 color">Member</p>
+            </div>
+            <div className="wh text-center p-3">
+              <img src={Shubham} className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Shubham Sabale</p>
+              <p className="m-0 p-0 color">Member</p>
+            </div>
+            <div className="wh text-center p-3">
+              <img src={Nikhil} className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Nikhil Gadakh</p>
+              <p className="m-0 p-0 color">Member</p>
+            </div>
+          </div>
+          <div className="d-flex justify-content-evenly flex-wrap px-5">
+            <div className="wh text-center p-3">
+              <img src={Harshal} className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Harshal Aglawe</p>
+              <p className="m-0 p-0 color">Member</p>
+            </div>
+            <div className="wh text-center p-3">
+              <img src={Nikhil} className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Nikhil Gadakh</p>
+              <p className="m-0 p-0 color">Member</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="c-bag py-5">
+        <h1 className="text-center fw-semibold">OUR MENTORS</h1>
+        <div className="container">
+          <div className="d-flex justify-content-center">
+            <div className="card text-center py-3 px-5 shadow m-5">
+              <img src="https://www.roadtocode.org/_next/image?url=https%3A%2F%2Fcdn.roadtocode.org%2Fteam%2Fsuraj.png&w=128&q=75" className="rounded-circle img-wh mx-auto border"/>
+              <p className="fw-bold fs-5 mt-2">Suraj Shende</p>
+               <p className="m-0">{/*Founder*/}Instructor<br/><a href="https://www.roadtocode.org/" className="color text-decoration-none">RoadToCode</a></p>
+            </div>
+            <div className="card text-center py-3 px-5 shadow m-5">
+              <img src="https://www.roadtocode.org/_next/image?url=https%3A%2F%2Fcdn.roadtocode.org%2Fteam%2Fpinki.png&w=128&q=75" className="rounded-circle img-wh mx-auto border"/>
+              <p className="fw-bold fs-5 mt-2">Vaibhavi Hole</p>
+              <p className="m-0">{/*Founding Member*/}Instructor<br/><a href="https://www.roadtocode.org/" className="color text-decoration-none">RoadToCode</a></p>
+            </div>
+          </div>
+          <h2 className="text-center">and all <a href="https://www.roadtocode.org/" className="color text-decoration-none"> Road To Code </a> team...</h2>
         </div>
       </div>
       <Footer />

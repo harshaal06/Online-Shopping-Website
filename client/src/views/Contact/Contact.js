@@ -7,7 +7,7 @@ import phone from "../../views/Contact/phone.png"
 import location from "../../views/Contact/location.png"
 import shape from "../../views/Contact/shape.png"
 import Navbar from '../../components/Navbar/Navbar'
-
+import Footer from "../../components/Footer/Footer"
 
 export default function Contact() {
 
@@ -139,6 +139,7 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    <Footer />
     </div>
   )
 }
