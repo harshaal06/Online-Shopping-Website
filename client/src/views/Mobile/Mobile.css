@@ -36,3 +36,19 @@ body{
     border-radius: 5px;
     
 }
+@media screen and (max-width: 450px){
+    .hading-1{
+        font-size: 15px;
+    }
+    .Card-container{
+        justify-content: space-evenly;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 800px) {
+    .hading-1{
+        font-size: 17px;
+    }
+    .Card-container{
+        justify-content: space-between;
+    }
+}
