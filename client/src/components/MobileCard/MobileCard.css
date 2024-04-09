@@ -1,0 +1,116 @@
+
+.mobile-card{
+    width: 400px;
+    height: 520px;
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    padding: 20px;
+   border-radius: 10px;
+   margin: 50px 0;
+   background-color:  #ffffff 
+   
+}
+.mobile-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.mobile-img{
+   height: 200px;
+   display: block;
+   margin-left:  auto;
+   margin-right: auto;
+}
+.mobile-title{
+text-align: center;
+font-weight: 800;
+font-size: 18px;
+margin-top: 15px;
+
+}
+.mobile-content{
+text-align: center;
+
+font-weight: 550;
+margin-top: 20px;
+}
+.mobile-price{
+text-align: center;
+font-family: 25px;
+margin-top: 10px;
+}
+.order-btn {
+    background-color: #fb5f04;
+    border: none;
+    padding: 6px 14px;
+    margin-top: 15px;
+    border-radius: 4px;
+    display: block;
+    margin: 25px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order-btn:hover {
+    background-color: #fb5f04;
+    transform: scale(1.05);
+}
+@media screen and (max-width: 350px ){
+    .mobile-img{
+        height: 100px;
+     }
+     .mobile-card{
+        width: 250px; 
+        height: 440px;
+    }
+    .order-btn {
+        background-color: #fb5f04;
+        border: none;
+        padding: 6px 14px;
+        margin-top: 15px;
+        border-radius: 4px;
+        display: block;
+        margin: 10px auto;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .mobile-title{
+        text-align: center;
+        font-weight: 800;
+        font-size: 15px;
+       
+        
+        }
+        .mobile-content{
+       
+        font-size: 15px;
+        }
+        .mobile-price{
+        font-family: 17px;
+        
+        }
+}
+@media screen and (min-width: 350px) and (max-width: 800px) {
+    .mobile-img{
+        height: 100px;
+     }
+     .mobile-card{
+        width: 350px; 
+        height: 390px;
+        margin-bottom: 50px;
+
+    }
+    .mobile-title{
+        text-align: center;
+        font-weight: 800;
+        font-size: 15px;
+       
+        
+        }
+        .mobile-content{
+       
+        font-size: 15px;
+        }
+        .mobile-price{
+        font-family: 17px;
+        
+        }
+}
