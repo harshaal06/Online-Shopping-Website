@@ -15,7 +15,7 @@ function ListCard({_id,url,title,content,price}) {
         
         <h2 className='list-price'>₹ {price}</h2>
     
-
+    <button className='order-btn'>order now</button>
         </div>
     </div>
   )
