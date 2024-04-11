@@ -21,7 +21,7 @@ function OrderNow() {
           onClick={msg}
             class="w-100 p-2 px-3 rounded border border-black" />
           <p class="my-2 mt-3">Your Img Url :</p>
-          <input type="text" placeholder="Your first and last name" required
+          <input type="text" placeholder="Enter your profile URL" required
           
             class="w-100 p-2 px-3 rounded border border-black" />
             <div class="row my-2 mt-3 d-flex justify-content-between">

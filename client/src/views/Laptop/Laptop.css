@@ -5,7 +5,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 0 30px;
+
 }
 body{
     background-color:  #eef3f7 
@@ -39,6 +39,6 @@ body{
         font-size: 17px;
     }
     .Card-container{
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 }

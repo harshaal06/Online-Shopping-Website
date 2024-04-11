@@ -65,11 +65,11 @@ export default function Contact() {
           <div className="info22">
             <div className="information22">
               <img src={location} className="icon22" alt="" />
-              <p>Rahuri Tal-Rahuri, Dist-A.nagar,State-Maharashtra 413705</p>
+              <p>84, InfoTeachShop, Narayana Residency, Ward No 3, Prasad Colony, Nagpur - 441108</p>
             </div>
             <div className="information22">
               <img src={Email} className="icon22" alt="surajhapse1@gmail.com" />
-              <p>ganeshwagh580@gmail.com</p>
+              <p>heritagehorizon@gmail.com</p>
             </div>
             <div className="information22">
               <img src={phone} className="icon22" alt="" />

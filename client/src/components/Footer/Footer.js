@@ -38,7 +38,7 @@ function Footer() {
           <div class="col-md-4 col-sm-12 mt-4 text-center text-md-start">
             <p class="fs-5 m-0">Contact</p>
             <ul>
-              <li class="list-group-item my-2">📌 84, collegeName, Laxmi Narayan Chowk, Opposite Narayana Residency, Ward No 3, Prasad Colony, Nagpur - 441108</li>
+              <li class="list-group-item my-2">📌 84, InfoTeachShop, Laxmi Narayan Chowk, Opposite Narayana Residency, Ward No 3, Prasad Colony, Nagpur - 441108</li>
               <li class="list-group-item my-2">📱<a href="mob:8010564343" class="text-decoration-none">+91 8010564343</a></li>
               <li class="list-group-item my-2">✉️<a href="mailto:hemantagl206@gmail.com" class="text-decoration-none"> heritagehorizon@gmail.com</a></li>
               <li class="list-group-item my-3">
@@ -49,7 +49,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <p class="text-center pt-4">Copyright © <a href="https://harshal-aglawe.vercel.app/" class="text-decoration-none text-light">harshal-aglawe</a> 2024</p>
+          <p class="text-center pt-4">Copyright © <a href="https://harshal-aglawe.vercel.app/" class="text-decoration-none text-light">InfoTeachShop</a> 2024</p>
         </div>
     </div>
     </div>
