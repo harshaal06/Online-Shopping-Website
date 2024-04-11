@@ -15,7 +15,7 @@ function Footer() {
           <div class="col-md-4 col-sm-12 mt-4 text-center">
             <img src={Gadgets} class="w-25 mb-4" />
             <h2 class="fw-bold">InfoTechShop</h2>
-            <p class="fw-light m-0">To develop a knowledge based society with clarity of thoughts and charity at hearts to serve humanity with integrity.</p>
+            <p class="fw-light m-0">Empowering your tech journey, one innovation at a time.Your trusted source for cutting-edge solutions in the digital age.</p>
           </div>
           <div class="col-md-2 col-sm-12 mt-4 text-center text-md-start">
             <p class="fs-5 m-0">Quick Links</p>
