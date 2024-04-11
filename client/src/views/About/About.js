@@ -21,21 +21,21 @@ function About() {
 
   const [reviews, setReviews] = useState([]);
 
-  const loadReview = async () =>{
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/review`);
+  const loadReview = async () => {
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/review`);
 
-      setReviews(response.data.data);
+    setReviews(response.data.data);
   }
 
-  useEffect(()=>{
-      loadReview();
+  useEffect(() => {
+    loadReview();
   }, []);
 
-  const addReview = async() => {
+  const addReview = async () => {
     const response = await axios.post(`${process.env.REACT_APP_API_URL}/review`,
-    {
-      name, message
-    })
+      {
+        name, message
+      })
     toast.success(response.data.message)
     reset()
   }
@@ -68,41 +68,42 @@ function About() {
         <h1 className="text-center">Write a review</h1><hr />
         <div className="container">
           <div className="row">
-            <div className="my-md-5 my-sm-0 d-flex flex-wrap flex-wrap justify-content-around">
-              <div className="card col-md-5 col-xs-12 shadow p-4 p-md-5 w-xs-100 w-md-auto">
+              <div className="card col-md-5 col-12 shadow p-4 p-md-5 w-xs-100 w-md-auto">
+                <h1 className="text-center mb-5">Add Review</h1>
                 <p className="mb-2">Name : </p>
                 <input type="text" placeholder="Enter Name" required
-                value={name}
-                onChange={(e)=>{
-                  setName(e.target.value)
-                }}
-                 className="mb-4 p-2 px-3 rounded border border-black" />
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value)
+                  }}
+                  className="mb-4 p-2 px-3 rounded border border-black" />
                 <p className="mb-2 col-6">Review : </p>
                 <input placeholder="Write Your Review" required
-                value={message}
-                onChange={(e)=>{
-                  setMessage(e.target.value)
-                }}
+                  value={message}
+                  onChange={(e) => {
+                    setMessage(e.target.value)
+                  }}
                   className="mb-4 p-2 px-3 rounded border border-black" />
                 <div className="text-center mt-4">
                   <button type="button"
-                  onClick={addReview} className="px-5 py-2 rounded bag-btn">Post</button>
+                    onClick={addReview} className="px-5 py-2 rounded bag-btn">Post</button>
                 </div>
               </div>
-              <img src={AboutImg} class="imges"></img>
+              <div className="col-12 col-md-7 ">
+              <img src={AboutImg} class="imges w-100" />
+              </div>
             </div>
           </div>
-        </div>
       </div>
       <div>
         <div className="container">
           <div className="d-flex justify-content-evenly flex-wrap">
-          {
-            reviews.map((review) => {
-              const {_id, name, message} = review;
-              return( <ReviewCard key={_id} _id={_id} name={name} message={message} /> )
-            })
-          }
+            {
+              reviews.map((review) => {
+                const { _id, name, message } = review;
+                return (<ReviewCard key={_id} _id={_id} name={name} message={message} />)
+              })
+            }
           </div>
         </div>
       </div>
@@ -113,39 +114,39 @@ function About() {
           </div>
           <div className="d-flex justify-content-evenly flex-wrap px-5">
             <div className="wh text-center p-3">
-              <img src={Srushti} className="rounded-circle img-wh mx-auto"/>
+              <img src={Srushti} className="rounded-circle img-wh mx-auto" />
               <p className="fw-bold fs-5 mt-2 mb-0">Srushti Garad</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
             <div className="wh text-center p-3">
-              <img src={Harshal} className="rounded-circle img-wh mx-auto"/>
+              <img src={Harshal} className="rounded-circle img-wh mx-auto" />
               <p className="fw-bold fs-5 mt-2 mb-0">Harshal Aglawe</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
             <div className="wh text-center p-3">
-              <img src={Nikhil} className="rounded-circle img-wh mx-auto"/>
+              <img src={Nikhil} className="rounded-circle img-wh mx-auto" />
               <p className="fw-bold fs-5 mt-2 mb-0">Nikhil Gadakh</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
             <div className="wh text-center p-3">
-              <img src={Shubham} className="rounded-circle img-wh mx-auto"/>
+              <img src={Shubham} className="rounded-circle img-wh mx-auto" />
               <p className="fw-bold fs-5 mt-2 mb-0">Shubham Sabale</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
           </div>
           <div className="d-flex justify-content-evenly flex-wrap px-5 mx-md-5">
             <div className="wh text-center p-3">
-              <img src={Ganesh} className="rounded-circle img-wh mx-auto"/>
+              <img src={Ganesh} className="rounded-circle img-wh mx-auto" />
               <p className="fw-bold fs-5 mt-2 mb-0">Ganesh Gadakh</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
             <div className="wh text-center p-3">
-              <img src={Member} className="rounded-circle img-wh mx-auto"/>
+              <img src={Member} className="rounded-circle img-wh mx-auto" />
               <p className="fw-bold fs-5 mt-2 mb-0">Rutik Petkar</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
             <div className="wh text-center p-3">
-              <img src="https://avatars.githubusercontent.com/u/118278831?v=4" className="rounded-circle img-wh mx-auto"/>
+              <img src="https://avatars.githubusercontent.com/u/118278831?v=4" className="rounded-circle img-wh mx-auto" />
               <p className="fw-bold fs-5 mt-2 mb-0">Rohit Holkar</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
@@ -155,16 +156,16 @@ function About() {
       <div className="c-bag py-5">
         <h1 className="text-center fw-semibold">OUR MENTORS</h1>
         <div className="container">
-          <div className="d-flex justify-content-center">
+          <div className="d-flex flex-wrap justify-content-center">
             <div className="card text-center py-3 px-5 shadow m-5">
-              <img src="https://www.roadtocode.org/_next/image?url=https%3A%2F%2Fcdn.roadtocode.org%2Fteam%2Fsuraj.png&w=128&q=75" className="rounded-circle img-wh mx-auto border"/>
+              <img src="https://www.roadtocode.org/_next/image?url=https%3A%2F%2Fcdn.roadtocode.org%2Fteam%2Fsuraj.png&w=128&q=75" className="rounded-circle img-wh mx-auto border" />
               <p className="fw-bold fs-5 mt-2">Suraj Shende</p>
-               <p className="m-0">{/*Founder*/}Instructor<br/><a href="https://www.roadtocode.org/" className="color text-decoration-none">RoadToCode</a></p>
+              <p className="m-0">{/*Founder*/}Instructor<br /><a href="https://www.roadtocode.org/" className="color text-decoration-none">RoadToCode</a></p>
             </div>
             <div className="card text-center py-3 px-5 shadow m-5">
-              <img src="https://www.roadtocode.org/_next/image?url=https%3A%2F%2Fcdn.roadtocode.org%2Fteam%2Fpinki.png&w=128&q=75" className="rounded-circle img-wh mx-auto border"/>
+              <img src="https://www.roadtocode.org/_next/image?url=https%3A%2F%2Fcdn.roadtocode.org%2Fteam%2Fpinki.png&w=128&q=75" className="rounded-circle img-wh mx-auto border" />
               <p className="fw-bold fs-5 mt-2">Vaibhavi Hole</p>
-              <p className="m-0">{/*Founding Member*/}Instructor<br/><a href="https://www.roadtocode.org/" className="color text-decoration-none">RoadToCode</a></p>
+              <p className="m-0">{/*Founding Member*/}Instructor<br /><a href="https://www.roadtocode.org/" className="color text-decoration-none">RoadToCode</a></p>
             </div>
           </div>
           <h2 className="text-center">and all <a href="https://www.roadtocode.org/" className="color text-decoration-none"> Road To Code </a> team...</h2>
