@@ -14,8 +14,8 @@ function Footer() {
         <div class="row d-flex justify-content-around text-light py-3 pb-0">
           <div class="col-md-4 col-sm-12 mt-4 text-center">
             <img src={Gadgets} class="w-25 mb-4" />
-            <h2 class="fw-bold">InfoTeachShop</h2>
-            <p class="fw-light m-0">To develop a knowledge based society with clarity of thoughts and charity at hearts to serve humanity with integrity.</p>
+            <h2 class="fw-bold">InfoTechShop</h2>
+            <p class="fw-light m-0">Empowering your tech journey, one innovation at a time.Your trusted source for cutting-edge solutions in the digital age.</p>
           </div>
           <div class="col-md-2 col-sm-12 mt-4 text-center text-md-start">
             <p class="fs-5 m-0">Quick Links</p>
@@ -40,7 +40,7 @@ function Footer() {
             <ul>
               <li class="list-group-item my-2">📌 84, collegeName, Laxmi Narayan Chowk, Opposite Narayana Residency, Ward No 3, Prasad Colony, Nagpur - 441108</li>
               <li class="list-group-item my-2">📱<a href="mob:8010564343" class="text-decoration-none">+91 8010564343</a></li>
-              <li class="list-group-item my-2">✉️<a href="mailto:hemantagl206@gmail.com" class="text-decoration-none"> heritagehorizon@gmail.com</a></li>
+              <li class="list-group-item my-2">✉️<a href="mailto:hemantagl206@gmail.com" class="text-decoration-none"> InfoTechShop@gmail.com</a></li>
               <li class="list-group-item my-3">
                 <a href="#"><img src={Linkedin} alt="" className="icon-h" /></a>
                 <a href="#"><img src={Twitter} alt="" className="icon-h" /></a>
