@@ -23,6 +23,8 @@ function AdminOrderNow() {
   const [pass, setPass] = useState('');
   const [payment, setPayment] = useState('');
   const {type} = useParams();
+  const [showPass, setShowPass] = useState('******');
+  const [showBtn, setShowBtn] = useState('Show');
 
   const {id} = useParams();
 
@@ -65,6 +67,17 @@ function AdminOrderNow() {
     setPayment('');
   }
 
+  const ShowPass = () => {
+    if(showPass==="******"){
+      setShowPass(pass);
+      setShowBtn("Hide");
+    }
+    else{
+      setShowPass('******');
+      setShowBtn('Show');
+    }
+  }
+
   return (
     <div>
     <Navbar />
@@ -98,16 +111,20 @@ function AdminOrderNow() {
                 </div>
                 <div class="col-md-6 col-xs-12">
                     <p class="my-2">Password :</p>
-                    <input type="password" placeholder="" required 
+                    <input type="password" placeholder="******" required 
                     value={pass}
                     onChange={(e)=>{
                       setPass(e.target.value)
                     }} class="w-100 p-2 px-3 rounded border border-black" />
+                    <div className='d-flex justify-content-between px-2 mb-0'>
+                      <p className='d-inline'>{showPass}</p>
+                      <p className='d-inline color cursor-pointer' onClick={ShowPass}>{showBtn}</p>
+                    </div>
                 </div>
             </div>
-            <div class="row my-2 mt-3 d-flex justify-content-between">
+            <div class="row my-2 d-flex justify-content-between">
                 <div class="col-md-6 col-xs-12">
-                <p class="my-2">Mob. No. :</p>
+                <p class="mb-2">Mob. No. :</p>
                 <input type="number" placeholder="1234567890" required 
                 value={mob}
                 onChange={(e)=>{
@@ -116,7 +133,7 @@ function AdminOrderNow() {
                 class="w-100 p-2 px-3 rounded border border-black" />
                 </div>
                 <div class="col-md-6 col-xs-12">
-                <p class="my-2">Payment Mode :</p>
+                <p class="mb-2">Payment Mode :</p>
                 <select 
                 value={payment}
                 onChange={(e)=>{

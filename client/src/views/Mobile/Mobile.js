@@ -25,8 +25,8 @@ function Mobile() {
     <div>
         <Navbar /> 
  
-             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKwWwFzkvG6n9unEjXtTHmx-5SiRJAzbZa56MqIZQuQR3TCH0d6hFZIC-O&s=10' className='img-front-screen'/>
-             <h2 className='hading-1'>"To ensure that your data doesn't fall into the wrong hands, it's essential to perform a low-level formatting of your hard disk before selling your Mobile. This process not only erases your data but also overwrites it with random information, making data recovery extremely difficult. 💡 Steps to Safeguard Your..." </h2>
+             <img src='https://images.samsung.com/is/image/samsung/assets/in/smartphones/galaxy-s24-ultra/buy/S24Ultra-SeeActualSize_PC.jpg' className='w-100'/>
+             <p className='mx-md-5 text-center px-md-5 p-4 fs-md-5'>"To ensure that your data doesn't fall into the wrong hands, it's essential to perform a low-level formatting of your hard disk before selling your Mobile. This process not only erases your data but also overwrites it with random information, making data recovery extremely difficult. 💡 Steps to Safeguard Your..." </p>
             <div className='container'>
             <div className='Card-container'>
              {

@@ -9,6 +9,10 @@ import ReviewCard from './../../components/ReviewCard/ReviewCard';
 import Harshal from './Harshal.jpg';
 import Nikhil from './Nikhil.jpg';
 import Shubham from './Shubham.jpg';
+import Ganesh from './Ganesh.jpg';
+import Rohit from './Rohit.jpg';
+import Srushti from './Srushti.jpg';
+import Member from './../Home/review.jpeg'
 
 function About() {
 
@@ -109,6 +113,11 @@ function About() {
           </div>
           <div className="d-flex justify-content-evenly flex-wrap px-5">
             <div className="wh text-center p-3">
+              <img src={Srushti} className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Srushti Garad</p>
+              <p className="m-0 p-0 color">Member</p>
+            </div>
+            <div className="wh text-center p-3">
               <img src={Harshal} className="rounded-circle img-wh mx-auto"/>
               <p className="fw-bold fs-5 mt-2 mb-0">Harshal Aglawe</p>
               <p className="m-0 p-0 color">Member</p>
@@ -123,21 +132,21 @@ function About() {
               <p className="fw-bold fs-5 mt-2 mb-0">Shubham Sabale</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
-            <div className="wh text-center p-3">
-              <img src={Nikhil} className="rounded-circle img-wh mx-auto"/>
-              <p className="fw-bold fs-5 mt-2 mb-0">Nikhil Gadakh</p>
-              <p className="m-0 p-0 color">Member</p>
-            </div>
           </div>
-          <div className="d-flex justify-content-evenly flex-wrap px-5">
+          <div className="d-flex justify-content-evenly flex-wrap px-5 mx-md-5">
             <div className="wh text-center p-3">
-              <img src={Harshal} className="rounded-circle img-wh mx-auto"/>
-              <p className="fw-bold fs-5 mt-2 mb-0">Harshal Aglawe</p>
+              <img src={Ganesh} className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Ganesh Gadakh</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
             <div className="wh text-center p-3">
-              <img src={Nikhil} className="rounded-circle img-wh mx-auto"/>
-              <p className="fw-bold fs-5 mt-2 mb-0">Nikhil Gadakh</p>
+              <img src={Member} className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Rutik Petkar</p>
+              <p className="m-0 p-0 color">Member</p>
+            </div>
+            <div className="wh text-center p-3">
+              <img src="https://avatars.githubusercontent.com/u/118278831?v=4" className="rounded-circle img-wh mx-auto"/>
+              <p className="fw-bold fs-5 mt-2 mb-0">Rohit Holkar</p>
               <p className="m-0 p-0 color">Member</p>
             </div>
           </div>

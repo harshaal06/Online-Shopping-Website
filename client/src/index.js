@@ -18,6 +18,7 @@ import AdminUpdateDetails from './views/AdminDashboard/AdminUpdateDetails';
 import { Toaster } from 'react-hot-toast';
 import LaptopBlog from './views/LaptopBlog/LaptopBlog';
 import TabletBlog from './views/TabletBlog/TabletBlog';
+import MobileBlog from './views/MobileBlog/MobileBlog';
 
 
 const router = createBrowserRouter([
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: "/laptop-blog/:id",
     element: <LaptopBlog />
+  },
+  {
+    path: "/mobile-blog/:id",
+    element: <MobileBlog />
   },
   {
     path: "/tablet-blog/:id",

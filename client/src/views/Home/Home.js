@@ -6,27 +6,33 @@ import Tablet from "./Tablets 1.jpeg"
 import Buds from "./Earbuds.jpg"
 import Laptop from "./laptop.png"
 import Navbar from '../../components/Navbar/Navbar'
-import Review from './review.jpeg'
-import Star from "./star.png"
 import Footer from "../../components/Footer/Footer"
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import ReviewCard from './../../components/ReviewCard/ReviewCard';
-
+import toast from 'react-hot-toast';
+import CustomersCard from './../../components/Customers/Customers';
 
 function App() {
 
   const [reviews, setReviews] = useState([]);
+  const [orders, setOrders] = useState([]);
 
   const loadReview = async () =>{
       const response = await axios.get(`${process.env.REACT_APP_API_URL}/review`);
+      const responseO = await axios.get(`${process.env.REACT_APP_API_URL}/order`);
 
       setReviews(response.data.data);
+      setOrders(responseO.data.data);
   }
 
   useEffect(()=>{
       loadReview();
   }, []);
+
+  const popup = () =>{
+    toast("This product coming soon..🔜");
+  }
 
   return (
     <div>
@@ -71,7 +77,7 @@ function App() {
                 <h3 className='text-center mt-5'>Tablets</h3>
               </div>
               </Link>
-              <div className='card wh mt-4 mt-md-0 p-3 py-4 shadow rounded-4'>
+              <div className='card wh mt-4 mt-md-0 p-3 py-4 shadow rounded-4' onClick={popup}>
                 <img src={Buds} className='mx-auto img-whh' />
                 <h3 className='text-center'>Speakers</h3>
               </div>
@@ -117,6 +123,21 @@ function App() {
             </details>
             </div>
           </div>
+        </div>
+      </div>
+      <div>
+        <div className='p-3 p-md-5'>
+            <h1 className='text-center mb-4'>Our recently Customers...</h1>
+            <div className='container'>
+            <div className="d-flex justify-content-evenly flex-wrap">
+              {
+                orders.map((order) => {
+                  const { _id, name, imgurl, city} = order;
+                  return (<CustomersCard name={name} imgurl={imgurl} city={city}/>)
+                })
+              }
+              </div>
+            </div>
         </div>
       </div>
       <Footer />

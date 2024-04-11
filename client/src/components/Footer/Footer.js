@@ -14,7 +14,7 @@ function Footer() {
         <div class="row d-flex justify-content-around text-light py-3 pb-0">
           <div class="col-md-4 col-sm-12 mt-4 text-center">
             <img src={Gadgets} class="w-25 mb-4" />
-            <h2 class="fw-bold">Website Name</h2>
+            <h2 class="fw-bold">InfoTeachShop</h2>
             <p class="fw-light m-0">To develop a knowledge based society with clarity of thoughts and charity at hearts to serve humanity with integrity.</p>
           </div>
           <div class="col-md-2 col-sm-12 mt-4 text-center text-md-start">

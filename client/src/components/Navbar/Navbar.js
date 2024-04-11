@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark-subtle">
     <div className="container-fluid mx-5">
-      <Link to="#" className="navbar-brand ms-md-5 ms-md-0 fs-3">WebsiteName</Link>
+      <Link to="#" className="navbar-brand ms-md-5 ms-md-0 fs-3">InfoTeachShop</Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>

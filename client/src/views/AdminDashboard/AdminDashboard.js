@@ -16,7 +16,7 @@ import toast from 'react-hot-toast';
 
 function AdminDashboard() {
 
-  const [activeTab, setActiveTab] = useState("main");
+  const [activeTab, setActiveTab] = useState("login");
   const [loginUser, setLoginUser] = useState('');
   const [loginPass, setLoginPass] = useState('');
   const [users, setUsers] = useState('');

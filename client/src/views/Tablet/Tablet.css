@@ -10,6 +10,11 @@ body {
   .tablet-container {
     text-align: center;
   }
+  .card-box-tablet{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
   
   .tablet-heading {
     margin-top: 20px;
@@ -18,8 +23,7 @@ body {
   @media screen and (max-width: 500px) {
     .main-container {
       width: 100%; 
-      max-width: 900px; 
-      height :550px ;
+      height :auto ;
     }
     .tablet-heading {
       font-size: 20px;

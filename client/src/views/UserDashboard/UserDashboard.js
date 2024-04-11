@@ -110,6 +110,19 @@ function UserDashboard() {
     loadItem();
   }, []);
 
+  const [showPass, setShowPass] = useState('******');
+  const [showBtn, setShowBtn] = useState('Show');
+
+  const LShowPass = () => {
+    if(showPass==="******"){
+      setShowPass(loginPass);
+      setShowBtn("Hide");
+    }
+    else{
+      setShowPass('******');
+      setShowBtn('Show');
+    }
+  }
 
   const handleSetActiveComponent = (component) => {
     setActiveComponent(component);
@@ -143,7 +156,11 @@ function UserDashboard() {
                 onChange={(e) => {
                   setLoginPass(e.target.value)
                 }}
-                className='mb-3 p-2 px-3 rounded border border-black' />
+                className='p-2 px-3 rounded border border-black' />
+                  <div className='d-flex justify-content-between px-3 mb-0'>
+                    <p className='d-inline'>{showPass}</p>
+                    <p className='d-inline color cursor-pointer' onClick={LShowPass}>{showBtn}</p>
+                  </div>
               <Link to="/contact" className="mb-3">Forgot your password?</Link>
 
               <button type='button' onClick={login} className="w-100 mt-2 py-2 rounded border bag">Login</button>
@@ -221,7 +238,7 @@ function UserDashboard() {
                                 <p class="card-text">{content}</p>
                                 <p class="card-text"><small class="text-body-secondary fs-5">Rs. {price}</small></p>
                                 <p class="card-text">Type of product: <b>{type}</b></p>
-                                <p class="card-text fw-light">Payment mode: {payment}</p>
+                                <p class="card-text fw-light">Payment mode: <b>Cash on delivery</b></p>
                               </div>
                             </div>
                           </div>
