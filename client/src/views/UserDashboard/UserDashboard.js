@@ -84,7 +84,7 @@ function UserDashboard() {
   const updateData = async () => {
     const response = await axios.put(`${process.env.REACT_APP_API_URL}/order/${id}`,
       {
-        name, address, city, state, code, mob, email, pass
+        name, imgurl, address, city, state, code, mob, email, pass
       })
     toast.success(response.data.message);
     loadItem();
