@@ -13,7 +13,7 @@ function AdminOrderNow() {
   const [content, setContent] = useState('');
   const [price, setPrice] = useState('');
   const [name, setName] = useState('');
-  const [imgurl, setImgurl] = useState('https://i.pravatar.cc/?img=13');
+  const [imgurl, setImgurl] = useState('https://i.pravatar.cc/?img=2');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');

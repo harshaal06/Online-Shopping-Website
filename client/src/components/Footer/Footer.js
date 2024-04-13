@@ -39,8 +39,8 @@ function Footer() {
             <p class="fs-5 m-0">Contact</p>
             <ul>
               <li class="list-group-item my-2">📌 84, InfoTeachShop, Laxmi Narayan Chowk, Opposite Narayana Residency, Ward No 3, Prasad Colony, Nagpur - 441108</li>
-              <li class="list-group-item my-2">📱<a href="mob:8010564343" class="text-decoration-none">+91 8010564343</a></li>
-              <li class="list-group-item my-2">✉️<a href="mailto:hemantagl206@gmail.com" class="text-decoration-none"> InfoTechShop@gmail.com</a></li>
+              <li class="list-group-item my-2">📱<a href="mob:8010564317" class="text-decoration-none">+91 8010564317</a></li>
+              <li class="list-group-item my-2">✉️<a href="mailto:harshalaglawe06@gmail.com" class="text-decoration-none"> InfoTechShop@gmail.com</a></li>
               <li class="list-group-item my-3">
                 <a href="#"><img src={Linkedin} alt="" className="icon-h" /></a>
                 <a href="#"><img src={Twitter} alt="" className="icon-h" /></a>

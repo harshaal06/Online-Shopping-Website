@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './OrderNow.css';
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from "../../components/Footer/Footer"
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
@@ -107,6 +108,7 @@ function OrderNow() {
         </div>
       </div>
     </div>
+    <Footer />
   </div>
   )
 }

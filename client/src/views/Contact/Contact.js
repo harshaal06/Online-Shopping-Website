@@ -69,11 +69,11 @@ export default function Contact() {
             </div>
             <div className="information22">
               <img src={Email} className="icon22" alt="surajhapse1@gmail.com" />
-              <p>heritagehorizon@gmail.com</p>
+              <p><a href="mailto:harshalaglawe06@gmail.com" class="text-decoration-none"> InfoTechShop@gmail.com</a></p>
             </div>
             <div className="information22">
               <img src={phone} className="icon22" alt="" />
-              <p>+91 7057231961</p>
+              <p>+91 8010564317</p>
             </div>
           </div>
 

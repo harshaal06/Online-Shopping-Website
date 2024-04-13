@@ -34,6 +34,8 @@ function App() {
     toast("This product coming soon..🔜");
   }
 
+  const count = 0;
+
   return (
     <div>
       <Navbar />
