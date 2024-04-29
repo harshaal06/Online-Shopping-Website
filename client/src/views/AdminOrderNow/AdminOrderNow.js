@@ -51,10 +51,6 @@ function AdminOrderNow() {
   }
 
   const reset = () => {
-    setUrl('');
-    setTitle('');
-    setContent('');
-    setPrice('');
     setName('');
     setImgurl('');
     setEmail('');
