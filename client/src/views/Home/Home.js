@@ -8,7 +8,7 @@ import Laptop from "./laptop.png"
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from "../../components/Footer/Footer"
 import { Link } from 'react-router-dom'
-import axios from 'axios';
+import axios from 'axios';  
 import ReviewCard from './../../components/ReviewCard/ReviewCard';
 import toast from 'react-hot-toast';
 import CustomersCard from './../../components/Customers/Customers';
@@ -91,6 +91,7 @@ function App() {
         <div className='p-5'>
           <h1 className='text-center mb-5'>Our Customer Reviews</h1>
           <div className='container'>
+          <div className='hhhhh'>
           <div className="d-flex justify-content-evenly flex-wrap">
           {
             reviews.map((review) => {
@@ -98,6 +99,7 @@ function App() {
               return( <ReviewCard key={_id} _id={_id} name={name} message={message} /> )
             })
           }
+          </div>
           </div>
           </div>
         </div>
@@ -131,6 +133,7 @@ function App() {
         <div className='p-3 p-md-5'>
             <h1 className='text-center mb-4'>Our recently Customers...</h1>
             <div className='container'>
+            <div className='hhhhh'>
             <div className="d-flex justify-content-evenly flex-wrap">
               {
                 orders.map((order) => {
@@ -138,6 +141,7 @@ function App() {
                   return (<CustomersCard name={name} imgurl={imgurl} city={city}/>)
                 })
               }
+              </div>
               </div>
             </div>
         </div>
