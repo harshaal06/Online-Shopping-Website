@@ -5,8 +5,7 @@ import {Link, useParams} from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
-function LaptopBlog()
- {
+function LaptopBlog(){
   const [title,setTitile] = useState('');
   const [url,setUrl] = useState('');
   const [content,setContent] = useState('');

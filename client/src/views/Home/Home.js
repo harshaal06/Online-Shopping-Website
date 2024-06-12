@@ -17,6 +17,7 @@ function App() {
 
   const [reviews, setReviews] = useState([]);
   const [orders, setOrders] = useState([]);
+  const [settings, saveSettings] = useState(false);
 
   const loadReview = async () =>{
       const response = await axios.get(`${process.env.REACT_APP_API_URL}/review`);
@@ -24,6 +25,9 @@ function App() {
 
       setReviews(response.data.data);
       setOrders(responseO.data.data);
+      if(!orders){
+        toast("Please wait ⏳ 50 seconds for the server to start.");
+      }
   }
 
   useEffect(()=>{
