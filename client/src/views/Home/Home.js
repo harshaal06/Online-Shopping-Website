@@ -25,12 +25,12 @@ function App() {
 
       setReviews(response.data.data);
       setOrders(responseO.data.data);
-      if(!orders){
-        toast("Please wait ⏳ 50 seconds for the server to start.");
-      }
   }
 
   useEffect(()=>{
+            if(!orders){
+        toast("Please wait ⏳ 50 seconds for the server to start.");
+      }
       loadReview();
   }, []);
 
