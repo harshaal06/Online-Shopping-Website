@@ -17,28 +17,26 @@ function App() {
 
   const [reviews, setReviews] = useState([]);
   const [orders, setOrders] = useState([]);
-  const [settings, saveSettings] = useState(false);
 
   const loadReview = async () =>{
+      toast.loading('Please wait ⏳ 50 seconds for the server to start.');
       const response = await axios.get(`${process.env.REACT_APP_API_URL}/review`);
       const responseO = await axios.get(`${process.env.REACT_APP_API_URL}/order`);
+
+      toast.dismiss();
+      toast.success('Server startd successfully!');
 
       setReviews(response.data.data);
       setOrders(responseO.data.data);
   }
 
   useEffect(()=>{
-            if(!orders){
-        toast("Please wait ⏳ 50 seconds for the server to start.");
-      }
       loadReview();
   }, []);
 
   const popup = () =>{
     toast("This product coming soon..🔜");
   }
-
-  const count = 0;
 
   return (
     <div>
