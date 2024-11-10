@@ -456,6 +456,47 @@ app.get("/admin",async(req, res)=>{
 })
 
 // ORDER
+app.post("/login",async(req, res)=>{
+    const {email, pass} = req.body;
+    
+    if(!email){
+        return res.json({
+            success: false,
+            message: "Email is required",
+            data: null
+        })
+    }
+
+    if(!pass){
+        return res.json({
+            success: false,
+            message: "Password is required",
+            data: null
+        })
+    }
+
+    const user = await Order.findOne({ email });
+
+    if (!user) {
+        return res.json({
+            success: false,
+            message: 'Invalid email or password'
+        });
+    }
+
+    if(!(user.pass == pass)){
+        return res.json({
+            success: false,
+            message: 'Invalid password'
+        });
+    }
+
+    res.json({
+        success: true,
+        message: "Login successfully",
+        data: user
+    })
+})
 app.post("/order",async(req, res)=>{
     const {url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type} = req.body;
 

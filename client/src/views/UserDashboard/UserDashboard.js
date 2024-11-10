@@ -34,50 +34,76 @@ function UserDashboard() {
   const [payment, setPayment] = useState('');
   const [type, setType] = useState('');
 
-  const loadItem = async () => {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/order`);
+  // const loadItem = async () => {
+  //   const response = await axios.get(`${process.env.REACT_APP_API_URL}/order`);
 
-    await setOrders(response.data.data);
-  }
+  //   await setOrders(response.data.data);
+  // }
 
-  const login = () => {
-    let count = 0;
+  const login = async () => {
     if (loginEmail === "" || loginPass === "") {
       toast('Enter email and password', {
         icon: '➕',
       });
     }
     else {
-      orders.map((order) => {
-        const { _id, url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type } = order;
-        if (loginEmail === email) {
-          if (loginPass !== pass) {
-            toast.error("Incorrect password ");
-            return;
-          }
-          else if (loginPass === pass) {
-            toast.success("Successfully Login");
-            setActiveTab("main");
-            setId(_id);
-            setName(name);
-            setImgurl(imgurl);
-            setAddress(address);
-            setCity(city);
-            setState(state);
-            setCode(code);
-            setMob(mob);
-            setEmail(email);
-            setPass(pass);
-            setUrl(url);
-            setTitle(title);
-            setContent(content);
-            setPrice(price);
-            setType(type);
-            setPayment(payment);
-            return;
-          }
-        }
-      })
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`,{ email: loginEmail, pass: loginPass});
+
+      if(!response.data.success){
+        toast.error(response.data.message);
+        return;
+      }
+
+      toast.success(response.data.message);
+
+      setId(response.data.data._id);
+      setName(response.data.data.name);
+      setImgurl(response.data.data.imgurl);
+      setAddress(response.data.data.address);
+      setCity(response.data.data.city);
+      setState(response.data.data.state);
+      setCode(response.data.data.code);
+      setMob(response.data.data.mob);
+      setEmail(response.data.data.email);
+      setPass(response.data.data.pass);
+      setUrl(response.data.data.url);
+      setTitle(response.data.data.title);
+      setContent(response.data.data.content);
+      setPrice(response.data.data.price);
+      setType(response.data.data.type);
+      setPayment(response.data.data.payment);
+      setActiveTab("main");
+
+      // orders.map((order) => {
+      //   const { _id, url, title, content, price, name, imgurl, address, city, state, code, mob, email, pass, payment, type } = order;
+      //   if (loginEmail === email) {
+      //     if (loginPass !== pass) {
+      //       toast.error("Incorrect password ");
+      //       return;
+      //     }
+      //     else if (loginPass === pass) {
+      //       toast.success("Successfully Login");
+      //       setActiveTab("main");
+      //       setId(_id);
+      //       setName(name);
+      //       setImgurl(imgurl);
+      //       setAddress(address);
+      //       setCity(city);
+      //       setState(state);
+      //       setCode(code);
+      //       setMob(mob);
+      //       setEmail(email);
+      //       setPass(pass);
+      //       setUrl(url);
+      //       setTitle(title);
+      //       setContent(content);
+      //       setPrice(price);
+      //       setType(type);
+      //       setPayment(payment);
+      //       return;
+      //     }
+      //   }
+      // })
     }
   }
 
@@ -87,7 +113,7 @@ function UserDashboard() {
         name, imgurl, address, city, state, code, mob, email, pass
       })
     toast.success(response.data.message);
-    loadItem();
+    // loadItem();
     setActiveComponent("profile");
   }
 
@@ -103,12 +129,12 @@ function UserDashboard() {
       })
     toast.success("Order delete successfully");
     login();
-    loadItem();
+    //loadItem();
   }
 
-  useEffect(() => {
-    loadItem();
-  }, []);
+  // useEffect(() => {
+  //   loadItem();
+  // }, []);
 
   const [showPass, setShowPass] = useState('******');
   const [showBtn, setShowBtn] = useState('Show');
